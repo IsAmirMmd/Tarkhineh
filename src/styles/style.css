@@ -1,0 +1,88 @@
+/* Root varibles */
+:root {
+  /* Main color pallet */
+  --Green-Green-Tint-1: #e5f2e9;
+  --Green-Green-Tint-2: #cae4d3;
+  --Green-Green-Tint-3: #b0d7bd;
+  --Green-Green-Tint-4: #96c9a7;
+  --Green-Green-Tint-5: #7cbc91;
+  --Green-Green-Tint-6: #61ae7b;
+  --Green-Green-Tint-7: #4e9968;
+  --primary-color: #417f56;
+  --Green-Green-Shade-8: #396f4b;
+  --Green-Green-Shade-9: #315f41;
+  --Green-Green-Shade-10: #294f36;
+  --Green-Green-Shade-11: #21402b;
+  --Green-Green-Shade-12: #183020;
+  --Green-Green-Shade-13: #102016;
+  --Green-Green-shade-14: #08100b;
+
+  /* Neutral color pallet */
+  --Neutral-White: #fff;
+  --Neutral-Gray-1: #f9f9f9;
+  --Neutral-Gray-2: #e1e1e1;
+  --Neutral-Gray-3: #ededed;
+  --Neutral-Gray-4: #adadad;
+  --Neutral-Gray-5: #757575;
+  --Neutral-Gray-6: #353535;
+  --Neutral-Black: #000;
+
+  /* State color pallet */
+
+  /* 1.Error :  */
+  --State-Error-Error: #c30000;
+  --State-Error-Error-Light: #ed2e2e;
+  --State-Error-Error-ExtraLight: #fff2f2;
+
+  /* 2.Success :  */
+  --State-Success-Success: #00966d;
+  --State-Success-Success-Light: #00ba88;
+  --State-Success-Success-ExtraLight: #f3fdfa;
+
+  /* 3.Warning :  */
+  --State-Warning-Warning: #a9791c;
+  --State-Warning-Warning-Light: #f4b740;
+  --State-Warning-Warning-ExtraLight: #fff8e1;
+
+  /* Padding */
+  --Padding-ExtraMini: 8px;
+  --Padding-Mini: 16px;
+  --Padding-Medium: 24px;
+  --Padding-High: 32px;
+
+  /* Shadows */
+  --Drop-Shadow-2: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+  --Drop-Shadow-4: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  --Drop-Shadow-6: 0px 6px 6px 0px rgba(0, 0, 0, 0.25);
+  --Drop-Shadow-8: 0px 8px 8px 0px rgba(0, 0, 0, 0.25);
+  --Drop-Shadow-12: 0px 12px 12px 0px rgba(0, 0, 0, 0.25);
+  --Drop-Shadow-16: 0px 16px 16px 0px rgba(0, 0, 0, 0.25);
+  --Drop-Shadow-Cards: 0px 0px 0px 0px rgba(0, 0, 0, 0.1),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.1), 0px 4px 4px 0px rgba(0, 0, 0, 0.09),
+    0px 9px 5px 0px rgba(0, 0, 0, 0.05), 0px 16px 6px 0px rgba(0, 0, 0, 0.01),
+    0px 25px 7px 0px rgba(0, 0, 0, 0);
+  --Drop-Shadow-Contact-Cards: 0px 0px 0px 0px rgba(0, 0, 0, 0.1),
+    0px 3px 6px 0px rgba(0, 0, 0, 0.1), 0px 11px 11px 0px rgba(0, 0, 0, 0.09),
+    0px 24px 14px 0px rgba(0, 0, 0, 0.05), 0px 42px 17px 0px rgba(0, 0, 0, 0.01),
+    0px 66px 18px 0px rgba(0, 0, 0, 0);
+
+  /* Border radius */
+  --Border-Radius-4: 4px;
+  --Border-Radius-8: 8px;
+  --Border-Radius-16: 16px;
+  --Border-Radius-24: 24px;
+  --Border-Radius-32: 32px;
+  --Border-Radius-64: 64px;
+}
+* {
+  box-sizing: border-box !important;
+  outline: 0 !important;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  text-decoration: none;
+}
+
+/* Components */
