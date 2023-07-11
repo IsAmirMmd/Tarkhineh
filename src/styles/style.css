@@ -74,10 +74,11 @@
   --Border-Radius-32: 32px;
   --Border-Radius-64: 64px;
 
-  /* Slider Root Style */
-  --swiper-navigation-size: 25px;
-  --swiper-pagination-bullet-size: 7px;
+  /* Slider Root Style(phone) */
+  --swiper-navigation-size: 0px;
+  --swiper-pagination-bullet-size: 5px;
   --swiper-pagination-bottom: 6px;
+  --swiper-pagination-bullet-horizontal-gap: 2px;
 }
 * {
   box-sizing: border-box !important;
@@ -89,7 +90,36 @@
   list-style: none;
   text-decoration: none;
 }
-
+/* ---------------------------- */
+/* btn component */
+.link-btn {
+  display: flex;
+  color: var(--Neutral-White);
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 180%;
+  background-color: var(--primary-color);
+}
+.btn-slider {
+  position: absolute;
+  bottom: 35px;
+}
+@media screen and (min-width: 768px) {
+  .btn-slider {
+    bottom: 65px;
+  }
+  .link-btn {
+    border-radius: 8px;
+    padding: 1rem 3rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+}
 /* Components */
 /* ---------------------------- */
 /* slider */
@@ -100,7 +130,7 @@
 .swiper {
   position: relative;
   width: 100%;
-  height: 350px;
+  height: 190px;
 }
 .swiper .swiper-button-prev,
 .swiper .swiper-button-next {
@@ -108,29 +138,74 @@
 }
 .swiper .swiper-pagination-bullet-active {
   background-color: var(--primary-color);
-  width: 10px;
-  height: 10px;
+  width: 7px;
+  height: 7px;
   transition: all 0.1s ease;
 }
 .swiper-slide {
+  position: relative;
   width: 100%;
   height: 100%;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .swiper-slide.slide-1 {
-  background-image: url(../data/slider-image.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.55) 0%,
+      rgba(0, 0, 0, 0.55) 100%
+    ),
+    linear-gradient(0deg, rgba(33, 64, 43, 0.5) 0%, rgba(33, 64, 43, 0.5) 100%),
+    url(../data/slider-phone.png);
+  background-blend-mode: normal, overlay, normal;
+}
+.swiper-slide .swiper__description {
+  color: var(--Neutral-White);
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 140%;
+  margin-bottom: 2rem;
+  transform: translateY(50%);
 }
 .swiper-pane {
   z-index: 1;
   position: absolute;
   bottom: -7px;
   left: 50%;
-  width: 125px;
+  width: 88px;
   transform: translateX(-50%);
 }
 .swiper-pane img {
   width: 100%;
+}
+@media screen and (min-width: 768px) {
+  :root {
+    --swiper-navigation-size: 25px;
+    --swiper-pagination-bullet-size: 7px;
+    --swiper-pagination-bottom: 6px;
+    --swiper-pagination-bullet-horizontal-gap: 4px;
+  }
+  .swiper {
+    height: 350px;
+  }
+  .swiper-slide.slide-1 {
+    background-image: url(../data/slider-image.png);
+  }
+  .swiper-slide .swiper__description {
+    font-size: 4rem;
+    transform: translateY(30%);
+  }
+  .swiper .swiper-pagination-bullet-active {
+    width: 10px;
+    height: 10px;
+  }
+  .swiper-pane {
+    width: 125px;
+  }
 }
 /* ---------------------------- */
