@@ -297,18 +297,27 @@
 .place__item {
   height: 8rem;
 }
-
+.badge-icon {
+  width: 14px;
+  margin-left: 0.8rem;
+}
+.badge-icon img {
+  width: 100%;
+}
 .header__link--item {
   width: 100%;
   display: flex;
+  flex-direction: row-reverse;
   justify-content: right;
   align-items: center;
   padding: 0 0.8rem;
   border-bottom: 1px solid var(--Neutral-Gray-3);
 }
 .header__link--item a {
+  text-align: right;
   color: var(--Neutral-Gray-5);
   font-weight: 400;
+  width: 100%;
   font-size: 1.2rem;
   line-height: 140%;
   padding-bottom: 0.4rem;
@@ -316,19 +325,11 @@
 }
 .header__link--item:hover a {
   color: var(--primary-color);
-  font-weight: 600;
-  border-bottom: 2px solid var(--primary-color);
 }
 
 .header__cta {
   display: flex;
   gap: 0.8rem;
-  align-items: center;
-}
-.user-parent {
-  height: 100%;
-  display: flex;
-  justify-content: center;
   align-items: center;
 }
 .cta__item {
@@ -352,7 +353,7 @@
   position: relative;
 }
 .profile__menu.active {
-  right: -95px;
+  right: -100px;
   top: 45px;
   display: flex;
   width: 150px;
@@ -404,6 +405,7 @@
   align-items: end;
   flex-direction: column;
   background: var(--Neutral-White);
+  overflow: hidden;
 }
 .header__links.active .header__links__items .place__item {
   height: auto;
@@ -412,9 +414,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 1;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  min-height: 100%;
   z-index: 10;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
   backdrop-filter: blur(2px);
@@ -454,6 +455,23 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+}
+.cta--cart {
+  position: relative;
+}
+.cart--amount {
+  position: absolute;
+  top: -3px;
+  right: -4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  color: var(--Neutral-White);
+  background-color: var(--Green-Green-Tint-6);
+  width: 12px;
+  height: 12px;
+  border-radius: 64px;
 }
 @media screen and (min-width: 768px) {
   .tarkhine__header {
@@ -512,11 +530,23 @@
     max-height: 100vh;
     z-index: 10;
   }
+  .header__link--item:hover a {
+    color: var(--primary-color);
+    font-weight: 600;
+    border-bottom: 2px solid var(--primary-color);
+  }
   .fas.fa-caret-down {
     font-size: 1.8rem;
   }
-  .flex__link{
+  .flex__link {
     display: block;
     width: auto;
+  }
+  .cart--amount {
+    top: 3px;
+    right: 4px;
+  }
+  .profile__menu.active {
+    right: -95px;
   }
 }
