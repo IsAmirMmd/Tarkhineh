@@ -139,8 +139,7 @@
 /* ---------------------------- */
 /* slider */
 .container-slider {
-  max-width: 1440px;
-  height: 100vh;
+  margin: 0 auto;
 }
 .swiper {
   position: relative;
@@ -548,5 +547,80 @@
   }
   .profile__menu.active {
     right: -95px;
+  }
+}
+/* ------ Menu bar -------- */
+.menu__bar {
+  padding: var(--Padding-ExtraMini);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menu__bar h6 {
+  font-size: 1.6rem;
+  margin-bottom: 5rem;
+}
+.menu__bar ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  direction: rtl;
+  justify-content: center;
+  gap: 8rem 1.6rem;
+}
+.menu__item {
+  flex: 0 1 150px;
+  max-width: 175px;
+  height: 100px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: var(--primary-color);
+}
+.menu__item img {
+  position: absolute;
+  top: -40px;
+  width: 120px;
+}
+.drink__image img {
+  top: -60px;
+}
+.menu__bar .link-btn {
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.1), 0px 4px 4px 0px rgba(0, 0, 0, 0.09),
+    0px 9px 5px 0px rgba(0, 0, 0, 0.05), 0px 16px 6px 0px rgba(0, 0, 0, 0.01),
+    0px 25px 7px 0px rgba(0, 0, 0, 0);
+  width: 100px;
+  border-radius: 4px;
+  padding: 0.5rem 0;
+  font-size: 1.2rem;
+  margin-top: 100px;
+  background-color: var(--Neutral-Gray-1);
+  color: var(--Neutral-Gray-6);
+}
+@media screen and (min-width: 768px) {
+  .menu__bar h6 {
+    font-size: 2.4rem;
+    margin-bottom: 8rem;
+  }
+  .menu__item {
+    flex: 1 1 150px;
+    min-height: 150px;
+    max-width: 250px;
+  }
+  .menu__item img {
+    width: 190px;
+    top: -70px;
+  }
+  .drink__image img {
+    top: -105px;
+  }
+  .menu__bar .link-btn {
+    width: 150px;
+    font-size: 2rem;
+    margin-top: 140px;
   }
 }
