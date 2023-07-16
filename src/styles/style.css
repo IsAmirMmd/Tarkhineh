@@ -734,7 +734,7 @@
 .cta--search {
   cursor: pointer;
 }
-.search--function{
+.search--function {
   display: none;
 }
 .header__links.active-search .search-modal {
@@ -810,4 +810,49 @@
   top: 59%;
   transform: translateY(-50%);
   left: var(--Padding-Mini);
+}
+/* ------ search mobile -------- */
+.search-box-mobile {
+  margin-top: 1.6rem;
+  display: flex;
+}
+.search-mobile--function {
+  padding: 1rem 1.5rem;
+  display: flex;
+  margin: auto;
+  width: 90%;
+}
+.function--search--panel {
+  width: 100%;
+}
+.function--search--panel #search-mobileBox {
+  width: 100%;
+  direction: rtl;
+  outline: 0;
+  border: 1px solid #cbcbcb;
+  border-radius: var(--Border-Radius-4);
+  padding: var(--Padding-ExtraMini);
+}
+.search-mobile-box{
+  position: relative;
+}
+.search-mobile-box-img {
+  width: 16px;
+  height: 16px;
+  outline: 0;
+  border: 0;
+  background-color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: var(--Padding-ExtraMini);
+}
+.search-mobile-box-img img {
+  width: 100%;
+}
+@media screen and (min-width:768px) {
+  .search-box-mobile{
+    display: none;
+  }
 }
