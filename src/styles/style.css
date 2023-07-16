@@ -566,7 +566,7 @@
   flex-wrap: wrap;
   direction: rtl;
   justify-content: center;
-  gap: 8rem 1.6rem;
+  gap: 8rem 2rem;
 }
 .menu__item {
   flex: 0 1 150px;
@@ -622,5 +622,111 @@
     width: 150px;
     font-size: 2rem;
     margin-top: 140px;
+  }
+}
+/* --------introduction ------------ */
+.introduction--container {
+  width: 100%;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.65) 0%,
+      rgba(0, 0, 0, 0.65) 100%
+    ),
+    url(../data/intro__image.jpg), lightgray 50% / cover no-repeat;
+  background-position: center;
+  margin: auto;
+}
+.introduction {
+  max-width: 1440px;
+  padding: 1.6rem 2rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 2.4rem auto 0 auto;
+  gap: 2.4rem;
+}
+.introduction__details {
+  color: var(--Neutral-White);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 180%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  direction: rtl;
+}
+.introduction__details p {
+  font-size: 1.6rem;
+}
+.introduction__details a {
+  padding: 0.5rem 1.6rem;
+  width: fit-content;
+  outline: 0;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  border: 1px solid var(--Neutral-White);
+  background-color: transparent;
+  margin-right: auto;
+}
+
+.introduction__details a > img {
+  margin-right: 0.8rem;
+}
+.introduction__exprience {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  gap: 1.6rem 4.8rem;
+  direction: rtl;
+  color: var(--Neutral-White);
+}
+.experince__badge {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.experince__badge span {
+  font-size: 1.2rem;
+}
+.experince__icon {
+  width: 24px;
+  margin-bottom: 0.8rem;
+}
+@media screen and (min-width: 768px) {
+  .introduction {
+    margin-top: 4.8rem;
+    padding: 4.8rem 4rem;
+    grid-template-columns: 3fr 2fr;
+    direction: rtl;
+    gap: 4.5rem;
+  }
+  .introduction__details {
+    font-size: 2rem;
+    gap: 2.4rem;
+  }
+  .introduction__details p {
+    font-size: 2.4rem;
+    font-weight: 700;
+  }
+  .introduction__details a {
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+  .introduction__details a > img {
+    width: 24px;
+    height: 24px;
+  }
+  .introduction__exprience {
+    max-width: 500px;
+    margin-right: auto;
+  }
+  .experince__badge span {
+    font-size: 1.8rem;
+  }
+  .experince__icon {
+    width: 48px;
+    margin-bottom: 0.8rem;
   }
 }
