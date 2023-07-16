@@ -5,6 +5,10 @@ const headerItem = document.querySelector(".header__links");
 const modalBackground = document.querySelector(".modal-background");
 const closePanel = document.querySelector(".close-panel");
 const navbarCart = document.querySelector(".cta--cart");
+const searchButton = document.querySelector(".cta--search");
+const closeSearch = document.querySelector(".close--serach--panel--mark");
+const searchModal = document.querySelector(".search-modal");
+
 // variables
 let inCartAmount = 0;
 
@@ -13,7 +17,7 @@ class NavbarComponent {
     profileDownCaret.addEventListener("click", () => {
       profileMenu.classList.toggle("active");
     });
-
+    // the side menu
     hamburgerMenu.addEventListener("click", () => {
       console.log(hamburgerMenu);
       headerItem.classList.add("active");
@@ -25,6 +29,16 @@ class NavbarComponent {
 
     closePanel.addEventListener("click", () => {
       headerItem.classList.remove("active");
+    });
+    // search bar
+    searchButton.addEventListener("click", () => {
+      headerItem.classList.add("active-search");
+    });
+    closeSearch.addEventListener("click", () => {
+      headerItem.classList.remove("active-search");
+    });
+    searchModal.addEventListener("click", () => {
+      headerItem.classList.remove("active-search");
     });
   }
   loadCart() {

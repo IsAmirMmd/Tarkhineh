@@ -394,7 +394,7 @@
 }
 .header__links.active .header__links__items {
   z-index: 11;
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 0;
   width: 60%;
@@ -729,4 +729,85 @@
     width: 48px;
     margin-bottom: 0.8rem;
   }
+}
+/* ------- search bar -------- */
+.cta--search {
+  cursor: pointer;
+}
+.search--function{
+  display: none;
+}
+.header__links.active-search .search-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  z-index: 10;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  backdrop-filter: blur(2px);
+}
+.header__links.active-search .search--function {
+  display: block;
+  width: 600px;
+  position: fixed;
+  width: 600px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 11;
+}
+.close--serach--panel {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--Neutral-Gray-3);
+  border-radius: var(--Border-Radius-8) var(--Border-Radius-8) 0 0;
+  height: 84px;
+  font-size: 2rem;
+  font-weight: 400;
+}
+.close--serach--panel span {
+  font-family: Arial !important;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  cursor: pointer;
+}
+.function--serach--panel {
+  margin-top: -1px;
+  background-color: var(--Neutral-White);
+  padding-top: 4rem;
+  padding-bottom: 4.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  border-radius: 0 0 var(--Border-Radius-8) var(--Border-Radius-8);
+}
+.function--serach--panel p {
+  font-size: 1.6rem;
+  direction: rtl;
+}
+.function--serach--panel #searchBox {
+  direction: rtl;
+  width: 400px;
+  outline: 0;
+  border: 1px solid #cbcbcb;
+  border-radius: var(--Border-Radius-8);
+  padding: var(--Padding-ExtraMini) var(--Padding-Mini);
+}
+.search-box {
+  position: relative;
+}
+.search-box-img {
+  outline: 0;
+  border: 0;
+  background-color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 59%;
+  transform: translateY(-50%);
+  left: var(--Padding-Mini);
 }
