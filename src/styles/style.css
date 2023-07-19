@@ -1211,7 +1211,7 @@
 }
 /* food bar */
 .suggestion__bar {
-  max-width: 1440;
+  max-width: 1440px;
   direction: rtl;
   padding: 1rem 2rem 2rem 2rem;
 }
@@ -1272,6 +1272,16 @@
   align-items: center;
   font-size: 1rem;
 }
+.food-box__fav > div img {
+  cursor: pointer;
+}
+.food-box__fav > div span {
+  display: none;
+  font-size: 1rem;
+  color: var(--Neutral-Gray-4);
+  font-weight: 400;
+  margin-right: 4px;
+}
 .food-box__fav--star img {
   margin-left: 2px;
 }
@@ -1306,6 +1316,58 @@
   padding: 0 var(--Padding-ExtraMini);
   margin-right: 1.3rem;
 }
+@media screen and (min-width: 768px) {
+  .suggestion__bar {
+    padding: 4rem 8rem;
+  }
+  .suggestion__bar h4 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 2.4rem;
+  }
+  .suggestion__bar--food {
+    width: 290px;
+    border-radius: var(--Border-Radius-8);
+  }
+  .food-box {
+    padding: 0 1.6rem;
+  }
+  .food__menu {
+    gap: 2.4rem;
+  }
+  .food-image {
+    width: 288px;
+    height: 256px;
+  }
+  .food-box__fav {
+    width: auto;
+  }
+  .food-box__fav > div {
+    font-size: 1.4rem;
+  }
+  .food-box__price--price {
+    font-size: 1.6rem;
+  }
+  .food-image img {
+    border-radius: var(--Border-Radius-8) var(--Border-Radius-8) 0 0;
+    width: 288px;
+    height: 256px;
+  }
+  .food-name {
+    margin-top: 1.6rem;
+    margin-bottom: 1.6rem;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  .add-to-cart.link-btn {
+    margin: 1.6rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+  .food-box__fav > div span {
+    display: block;
+  }
+}
 /* ---------- popular memu ref(food-box) ------- */
 .popular__bar {
   background: var(--primary-color);
@@ -1313,6 +1375,11 @@
 }
 .popular__bar h4 {
   color: var(--Neutral-White);
+}
+@media screen and (min-width: 768px) {
+  .popular__bar {
+    padding: 2.4rem 8rem 8rem 4rem;
+  }
 }
 /* ------ full menu ------- */
 .link-btn.full-menu {
@@ -1325,7 +1392,27 @@
   font-size: 1.2rem;
   color: var(--primary-color);
 }
+.link-btn.full-menu img {
+  margin-left: 0.4rem;
+  width: 16px;
+  height: 16px;
+}
 .show-more-btn {
   display: flex;
   margin: 0 1.2rem 1.2rem 1.2rem;
 }
+@media screen and (min-width: 768px) {
+  .link-btn.full-menu {
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+  .show-more-btn {
+    margin: -2.4rem 1.2rem 1.2rem 1.2rem;
+  }
+  .link-btn.full-menu img {
+    margin-left: 0.8rem;
+    width: 24px;
+    height: 24px;
+  }
+}
+/* album */
