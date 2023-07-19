@@ -18,13 +18,26 @@ class Footer {
         <li><a href="#">حریم خصوصی</a></li>
         <li class="footer__icon">
           <a href="#icon"
-            ><img src="src/data/twitter.svg" alt="twitter"
+            ><img src=${
+              window.location.pathname === "/"
+                ? "src/data/twitter.svg"
+                : "../src/data/twitter.svg"
+            } alt="twitter"
           /></a>
           <a href="#icon"
-            ><img src="src/data/instagram.svg" alt="instagram.svg"
+            ><img src=
+            ${
+              window.location.pathname === "/"
+                ? "src/data/instagram.svg"
+                : "../src/data/instagram.svg"
+            } alt="instagram.svg"
           /></a>
           <a href="#icon"
-            ><img src="src/data/telegram.svg" alt="telegram.svg"
+            ><img src=${
+              window.location.pathname === "/"
+                ? "src/data/telegram.svg"
+                : "../src/data/telegram.svg"
+            } alt="telegram.svg"
           /></a>
         </li>
       </ul>
