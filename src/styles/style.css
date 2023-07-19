@@ -1420,7 +1420,7 @@
   margin-bottom: 7rem;
 }
 .album__branch .swiper {
-  overflow: visible;
+  overflow: initial;
 }
 .album__branch .slide-1 {
   background: url(../data/branch-slider.jpg);
