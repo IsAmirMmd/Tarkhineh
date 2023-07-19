@@ -1213,7 +1213,7 @@
 .suggestion__bar {
   max-width: 1440;
   direction: rtl;
-  padding: 2rem;
+  padding: 1rem 2rem 2rem 2rem;
 }
 .food__menu {
   overflow-x: auto;
@@ -1223,10 +1223,11 @@
   gap: 1.6rem;
 }
 .suggestion__bar--food {
-  scroll-snap-align: center;
+  scroll-snap-align: start;
   border-radius: var(--Border-Radius-4);
   width: 170px;
   border: 1px solid #cbcbcb;
+  background-color: var(--Neutral-White);
 }
 .suggestion__bar h4 {
   font-size: 1.6rem;
@@ -1235,11 +1236,14 @@
   margin-bottom: 1.2rem;
 }
 .food-image {
+  width: 168px;
+  height: 110px;
 }
 .food-image img {
+  width: 168px;
+  height: 110px;
   border-radius: var(--Border-Radius-4) var(--Border-Radius-4) 0 0;
 }
-
 .food-name {
   margin-top: 4px;
   margin-bottom: 4px;
@@ -1301,4 +1305,27 @@
   color: var(--State-Error-Error);
   padding: 0 var(--Padding-ExtraMini);
   margin-right: 1.3rem;
+}
+/* ---------- popular memu ref(food-box) ------- */
+.popular__bar {
+  background: var(--primary-color);
+  padding: 1.2rem 2rem 2.4rem 2rem;
+}
+.popular__bar h4 {
+  color: var(--Neutral-White);
+}
+/* ------ full menu ------- */
+.link-btn.full-menu {
+  margin: 0 auto;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid var(--primary-color);
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+.show-more-btn {
+  display: flex;
+  margin: 0 1.2rem 1.2rem 1.2rem;
 }
