@@ -1419,9 +1419,6 @@
 .album__branch {
   margin-bottom: 7rem;
 }
-.album__branch .swiper {
-  overflow: initial;
-}
 .album__branch .slide-1 {
   background: url(../data/branch-slider.jpg);
   background-position: center;
@@ -1461,6 +1458,9 @@
     rgba(0, 0, 0, 0) 76.56%
   );
   right: 0;
+}
+.branch-details-holder {
+  position: relative;
 }
 .slider-branch {
   position: absolute;
@@ -1507,5 +1507,33 @@
     font-size: 2.4rem;
     font-weight: 700;
     margin-bottom: 1.4rem;
+  }
+  .slider-branch {
+    border-radius: var(--Border-Radius-8);
+    padding: var(--Padding-Mini);
+    grid-template-areas: "phone address time";
+    bottom: -90px;
+    width: 60%;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .slider-branch > div {
+    flex-direction: column;
+    font-size: 1.6rem;
+    gap: 1rem;
+  }
+  .slider-branch > div > img {
+    width: 32px;
+    aspect-ratio: 1/1;
+  }
+  .slider-details__adderss {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .slider-details__adderss {
+    max-width: 60%;
+    margin: 0 auto;
   }
 }
