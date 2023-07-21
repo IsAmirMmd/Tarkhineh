@@ -1513,7 +1513,7 @@
     padding: var(--Padding-Mini);
     grid-template-areas: "phone address time";
     bottom: -90px;
-    width: 60%;
+    width: 70%;
     gap: 3rem;
     justify-content: center;
     align-items: center;
