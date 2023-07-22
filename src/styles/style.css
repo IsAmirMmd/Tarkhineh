@@ -1213,6 +1213,7 @@
 .suggestion__bar {
   max-width: 1440px;
   direction: rtl;
+  margin: 0 auto;
   padding: 1rem 2rem 2rem 2rem;
 }
 .food__menu {
@@ -1240,8 +1241,10 @@
   height: 110px;
 }
 .food-image img {
-  width: 168px;
-  height: 110px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   border-radius: var(--Border-Radius-4) var(--Border-Radius-4) 0 0;
 }
 .food-name {
@@ -1542,6 +1545,7 @@
   max-width: 1440px;
   padding: 2rem;
   direction: rtl;
+  margin: 0 auto;
 }
 .rate__container h4 {
   margin-top: 2.4rem;
