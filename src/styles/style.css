@@ -1564,6 +1564,7 @@
   flex-wrap: nowrap;
   overflow-x: auto;
   font-size: 1rem;
+  margin-bottom: 2.4rem;
 }
 .rate__box--item {
   position: relative;
@@ -1614,6 +1615,8 @@
   }
   .rate__box {
     margin: 0 auto;
+    margin-bottom: 4rem;
+
     gap: 2.4rem;
     font-size: 1.4rem;
     padding: 0 6rem 2rem 6rem;
