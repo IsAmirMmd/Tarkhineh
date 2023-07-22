@@ -1372,8 +1372,11 @@
   }
 }
 /* ---------- popular memu ref(food-box) ------- */
-.popular__bar {
+.green-bg-container {
+  width: 100%;
   background: var(--primary-color);
+}
+.popular__bar {
   padding: 1.2rem 2rem 2.4rem 2rem;
 }
 .popular__bar h4 {
