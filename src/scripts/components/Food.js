@@ -1,4 +1,5 @@
 import { allFood } from "../../db/allFood.js";
+import { Storage } from "../storage.js";
 
 const allBar = document.querySelector(".all__bar .food__menu");
 const popularBar = document.querySelector(".popular__bar .food__menu");
@@ -200,6 +201,9 @@ class Food {
         heartImage.classList.toggle("heart-red");
       });
     });
+
+    // ------ cheking cart ------
+    this.checkCart();
   }
 
   loadAllFood() {
@@ -212,6 +216,29 @@ class Food {
 
   loadForeignFood() {
     foreignBar.innerHTML = forFoods;
+  }
+
+  checkCart() {
+    const addToCart = document.querySelectorAll(".add-to-cart.link-btn");
+
+    const allCart = Storage.loadCart();
+
+    addToCart.forEach((element) => {
+      element.addEventListener("click", (e) => {
+        e.preventDefault();
+        const id = parseInt(element.dataset.id);
+        console.log(id);
+        if (Storage.loadCart().find((cart) => cart.id === id)) {
+          const updated = Storage.loadCart().filter((cart) => cart.id !== id);
+          Storage.addToCart(updated);
+        } else {
+          element.innerText = "اضافه شده";
+          console.log(FoodStorage);
+          allCart.push(FoodStorage.filter((c) => c.id === id));
+          Storage.addToCart(allCart);
+        }
+      });
+    });
   }
 }
 
