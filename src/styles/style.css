@@ -1515,6 +1515,7 @@
     margin-bottom: 1.4rem;
   }
   .slider-branch {
+    border:3px solid var(--primary-color);
     border-radius: var(--Border-Radius-8);
     padding: var(--Padding-Mini);
     grid-template-areas: "phone address time";
@@ -1546,7 +1547,7 @@
 /* ----- rate container ------ */
 .rate__container {
   max-width: 1440px;
-  padding: 2rem;
+  padding: 0 2rem 2rem 2rem;
   direction: rtl;
   margin: 0 auto;
 }
@@ -1608,6 +1609,9 @@
   gap: 4px;
 }
 @media screen and (min-width: 768px) {
+  .rate__container {
+    padding: 2rem;
+  }
   .rate__container h4 {
     margin-top: 4.8rem;
     font-size: 24px;
