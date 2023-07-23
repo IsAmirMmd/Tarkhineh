@@ -1,11 +1,8 @@
 export class Storage {
-  constructor() {
-    
-  }
+  constructor() {}
 
   static loadCart() {
     const savedFood = JSON.parse(localStorage.getItem("foods")) || [];
-    console.log(savedFood);
     return savedFood;
   }
 

@@ -1,3 +1,5 @@
+import { Storage } from "../storage.js";
+
 const profileMenu = document.querySelector(".profile__menu");
 const profileDownCaret = document.querySelector(".arrow-down-profile");
 const hamburgerMenu = document.querySelector(".header__hamburger");
@@ -10,7 +12,6 @@ const closeSearch = document.querySelector(".close--serach--panel--mark");
 const searchModal = document.querySelector(".search-modal");
 
 // variables
-let inCartAmount = 0;
 
 class NavbarComponent {
   constructor() {
@@ -41,12 +42,14 @@ class NavbarComponent {
       headerItem.classList.remove("active-search");
     });
   }
+
   loadCart() {
+    let inCartAmount = Storage.loadCart().length;
+
     const cartImage = `<img src="../src/data/shopping-cart.svg" alt="new" />`;
     const cartSpan = `
     <span class="cart--amount">${inCartAmount}</span>
     `;
-    console.log(cartImage);
     navbarCart.innerHTML = cartImage + cartSpan;
   }
 }

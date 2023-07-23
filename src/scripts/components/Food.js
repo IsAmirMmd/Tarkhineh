@@ -1,5 +1,6 @@
 import { allFood } from "../../db/allFood.js";
 import { Storage } from "../storage.js";
+import NavbarComponent from "./navbar.js";
 
 const allBar = document.querySelector(".all__bar .food__menu");
 const popularBar = document.querySelector(".popular__bar .food__menu");
@@ -152,7 +153,6 @@ class Food {
           </div>
           `;
       allFoods += `<div class="food-name">${food.name}</div>`;
-      food.discount === 0 && console.log(food.name);
       allFoods += `
       <div class="food-box">
         <div class="food-box__fav">
@@ -222,21 +222,26 @@ class Food {
     const addToCart = document.querySelectorAll(".add-to-cart.link-btn");
 
     const allCart = Storage.loadCart();
+    const convertedCart = [...allCart];
 
     addToCart.forEach((element) => {
+      const id = parseInt(element.dataset.id);
+      let IsInCart = convertedCart.find((p) => p.id == id);
+      if (IsInCart) {
+        element.innerText = "اضافه شده";
+      }
       element.addEventListener("click", (e) => {
         e.preventDefault();
-        const id = parseInt(element.dataset.id);
-        console.log(id);
         if (Storage.loadCart().find((cart) => cart.id === id)) {
           const updated = Storage.loadCart().filter((cart) => cart.id !== id);
           Storage.addToCart(updated);
+          element.innerText = "افزودن به سبد خرید";
         } else {
           element.innerText = "اضافه شده";
-          console.log(FoodStorage);
-          allCart.push(FoodStorage.filter((c) => c.id === id));
+          allCart.push(FoodStorage.find((c) => c.id === id));
           Storage.addToCart(allCart);
         }
+        new NavbarComponent().loadCart();
       });
     });
   }
