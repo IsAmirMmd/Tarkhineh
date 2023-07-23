@@ -1210,6 +1210,9 @@
   }
 }
 /* food bar */
+.no-discount {
+  display: none !important;
+}
 .suggestion__bar {
   max-width: 1440px;
   direction: rtl;
@@ -1318,6 +1321,14 @@
   color: var(--State-Error-Error);
   padding: 0 var(--Padding-ExtraMini);
   margin-right: 1.3rem;
+}
+.food-box__fav i {
+  color: #999;
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+.food-box__fav .heart-red {
+  color: var(--State-Error-Error);
 }
 @media screen and (min-width: 768px) {
   .suggestion__bar {
@@ -1515,7 +1526,7 @@
     margin-bottom: 1.4rem;
   }
   .slider-branch {
-    border:3px solid var(--primary-color);
+    border: 3px solid var(--primary-color);
     border-radius: var(--Border-Radius-8);
     padding: var(--Padding-Mini);
     grid-template-areas: "phone address time";
