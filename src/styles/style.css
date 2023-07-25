@@ -1811,7 +1811,16 @@
   padding: 0.8rem 0;
   margin-top: 1.2rem;
 }
+.cart-box__item--image {
+  display: none;
+}
 .cart-box__amount.only-desktop {
+  display: none;
+}
+.cart-box--pc--info {
+  display: none;
+}
+.cart-box--pc--action {
   display: none;
 }
 @media screen and (min-width: 768px) {
@@ -1859,6 +1868,7 @@
     display: none;
   }
   .cart-box__item--image {
+    display: flex;
   }
   .cart-box__item--image img {
     width: 160px;
