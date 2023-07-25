@@ -8,7 +8,7 @@ const navbar = new NavbarComponent();
 
 const footer = new Footer();
 
-if (window.location.pathname !== "/") {
+if (window.location.pathname === "/pubic/foods.html") {
   const food = new Food();
 }
 
