@@ -1753,6 +1753,7 @@
   flex-direction: column;
   align-items: center;
   direction: rtl;
+  height: fit-content;
 }
 .cart-box__price > div {
   width: 100%;
@@ -1859,6 +1860,7 @@
     padding: 0;
     display: flex;
     flex-direction: row;
+    margin-bottom: 1.6rem;
     background-color: var(--Neutral-White);
     border: 1px solid var(--Neutral-Gray-7);
     border-radius: var(--Border-Radius-8);
