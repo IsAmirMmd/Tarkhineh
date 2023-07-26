@@ -25,7 +25,7 @@ class Cart {
             </div>
             <div class="cart-box__item--amount cart-in-phone">
               <span class="cart--plus">+</span>
-              <span class="cart--item-amount">۱</span>
+              <span class="cart--item-amount">${item.quantity}</span>
               <span class="cart--trash">
                 <img src="../src/data/trash-green.svg" alt="trash green" />
               </span>
@@ -45,7 +45,7 @@ class Cart {
                 </div>
                 <div class="cart-box__item--amount">
                   <span class="cart--plus">+</span>
-                  <span class="cart--item-amount">۱</span>
+                  <span class="cart--item-amount">${item.quantity}</span>
                   <span class="cart--trash cart--mines"> - </span>
                 </div>
               </div>
@@ -64,12 +64,15 @@ class Cart {
             `;
         });
         cartString += `</div>`;
+        
         let totalOff = 0;
         let totalPrice = 0;
         CartList.map((item) => {
-          totalOff += parseInt(item.price) - parseInt(item.offPrice);
-          totalPrice += parseInt(item.price);
+          totalOff +=
+            (parseInt(item.price) - parseInt(item.offPrice)) * item.quantity;
+          totalPrice += parseInt(item.price) * item.quantity;
         });
+
         cartString += `
         <div class="cart-box__price">
         <div class="cart-box__amount only-desktop">

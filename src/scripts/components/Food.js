@@ -238,7 +238,10 @@ class Food {
           element.innerText = "افزودن به سبد خرید";
         } else {
           element.innerText = "اضافه شده";
-          allCart.push(FoodStorage.find((c) => c.id === id));
+          allCart.push({
+            ...FoodStorage.find((c) => c.id === id),
+            quantity: 1,
+          });
           Storage.addToCart(allCart);
         }
         new NavbarComponent().loadCart();
