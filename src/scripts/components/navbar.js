@@ -45,12 +45,12 @@ class NavbarComponent {
 
   loadCart() {
     let inCartAmount = Storage.loadCart().length;
-
+    const cartLink = `<a href="../public/cart.html" class="cart-link" >`;
     const cartImage = `<img src="../src/data/shopping-cart.svg" alt="new" />`;
     const cartSpan = `
     <span class="cart--amount">${inCartAmount}</span>
     `;
-    navbarCart.innerHTML = cartImage + cartSpan;
+    navbarCart.innerHTML = cartLink + cartImage + cartSpan + `</a>`;
   }
 }
 

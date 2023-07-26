@@ -460,6 +460,11 @@
 .cta--cart {
   position: relative;
 }
+.cart-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .cart--amount {
   position: absolute;
   top: -3px;
