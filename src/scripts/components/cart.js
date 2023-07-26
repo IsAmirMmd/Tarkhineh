@@ -67,8 +67,8 @@ class Cart {
         let totalOff = 0;
         let totalPrice = 0;
         CartList.map((item) => {
-          totalOff += item.price - item.offPrice;
-          totalPrice += item.price;
+          totalOff += parseInt(item.price) - parseInt(item.offPrice);
+          totalPrice += parseInt(item.price);
         });
         cartString += `
         <div class="cart-box__price">
