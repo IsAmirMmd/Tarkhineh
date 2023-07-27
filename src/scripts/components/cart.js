@@ -53,7 +53,7 @@ class Cart {
                 </div>
               </div>
               <div class="cart-box--pc--action">
-                <img src="../src/data/trash.svg" alt="trash" />
+                <img class="cart--item-remove" src="../src/data/trash.svg" alt="trash" data-id=${item.id}/>
                 <div class="cart-box--pc__price">
                   <div class="cart-box--pc__price--discount">
                     <span class="last-price">${item.price}</span>
@@ -82,7 +82,7 @@ class Cart {
               <span class="cart-name" style="font-size: 1.6rem">سبد خرید</span>
               <span class="cart-count" style="font-size: 1.4rem">(${CartList.length})</span>
             </div>
-            <div>
+            <div class="all-cart-remove">
               <img style="width: 24px" src="../src/data/trash.svg" alt="" />
             </div>
           </div>
@@ -159,6 +159,31 @@ class Cart {
             }
             this.showCart();
           });
+        });
+
+        // cart item remover
+
+        const cartTRemover = document.querySelectorAll(".cart--item-remove");
+        cartTRemover.forEach((removeBtn) => {
+          removeBtn.addEventListener("click", () => {
+            const id = parseInt(removeBtn.dataset.id);
+            const allCartData = [...Storage.loadCart()];
+            const updatedCartdata = allCartData.filter(
+              (item) => item.id !== parseInt(id)
+            );
+            Storage.addToCart(updatedCartdata);
+            new NavbarComponent().loadCart();
+            this.showCart();
+          });
+        });
+
+        // remove all cart details
+
+        const allCartRemover = document.querySelector(".all-cart-remove");
+        allCartRemover.addEventListener("click", () => {
+          Storage.addToCart([]);
+          new NavbarComponent().loadCart();
+          this.showCart();
         });
       } else {
         CartBox.classList.add("cart-empty");

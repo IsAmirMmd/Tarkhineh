@@ -2016,3 +2016,8 @@
     font-size: 1.6rem;
   }
 }
+/* cart remover styles */
+.cart--item-remove,
+.all-cart-remove img {
+  cursor: pointer;
+}
