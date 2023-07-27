@@ -250,8 +250,6 @@ class Food {
           });
           Storage.addToCart(allCart);
         }
-        this.foreignFood();
-        this.popularFood();
         this.allFood();
         new NavbarComponent().loadCart();
       });
