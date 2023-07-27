@@ -1,4 +1,5 @@
 import { Storage } from "../storage.js";
+import NavbarComponent from "./navbar.js";
 
 class Cart {
   constructor() {
@@ -24,9 +25,9 @@ class Cart {
               <span>${item.offPrice}</span>
             </div>
             <div class="cart-box__item--amount cart-in-phone">
-              <span class="cart--plus">+</span>
+              <span class="cart--plus" data-id=${item.id} >+</span>
               <span class="cart--item-amount">${item.quantity}</span>
-              <span class="cart--trash">
+              <span class="cart--trash cart--mines" data-id=${item.id}>
                 <img src="../src/data/trash-green.svg" alt="trash green" />
               </span>
             </div>
@@ -44,9 +45,9 @@ class Cart {
                   <img src="../src/data/Star rate.svg" alt="" />
                 </div>
                 <div class="cart-box__item--amount">
-                  <span class="cart--plus">+</span>
+                  <span class="cart--plus" data-id=${item.id}>+</span>
                   <span class="cart--item-amount">${item.quantity}</span>
-                  <span class="cart--trash cart--mines"> - </span>
+                  <span class="cart--trash cart--mines" data-id=${item.id}> - </span>
                 </div>
               </div>
             </div>
@@ -64,7 +65,7 @@ class Cart {
             `;
         });
         cartString += `</div>`;
-        
+
         let totalOff = 0;
         let totalPrice = 0;
         CartList.map((item) => {
@@ -114,6 +115,49 @@ class Cart {
 
         CartBox.innerHTML = cartString;
       }
+
+      // add and cost quantity
+      const addQuantity = document.querySelectorAll(".cart--plus");
+      const minesQuantity = document.querySelectorAll(".cart--mines");
+
+      addQuantity.forEach((addBtn) => {
+        addBtn.addEventListener("click", () => {
+          const id = addBtn.dataset.id;
+          const index = Storage.loadCart().findIndex(
+            (item) => item.id === parseInt(id)
+          );
+          const allCartData = [...Storage.loadCart()];
+          const updatedItem = { ...allCartData[index] };
+          updatedItem.quantity++;
+          allCartData[index] = updatedItem;
+          Storage.addToCart(allCartData);
+          console.log("updatedItem", allCartData);
+          this.showCart();
+        });
+      });
+
+      minesQuantity.forEach((mineBtn) => {
+        mineBtn.addEventListener("click", () => {
+          const id = mineBtn.dataset.id;
+          const index = Storage.loadCart().findIndex(
+            (item) => item.id === parseInt(id)
+          );
+          const allCartData = [...Storage.loadCart()];
+          const updatedItem = { ...allCartData[index] };
+          if (updatedItem.quantity === 1) {
+            const updatedCartdata = allCartData.filter(
+              (item) => item.id !== parseInt(id)
+            );
+            Storage.addToCart(updatedCartdata);
+            new NavbarComponent().loadCart();
+          } else {
+            updatedItem.quantity--;
+            allCartData[index] = updatedItem;
+            Storage.addToCart(allCartData);
+          }
+          this.showCart();
+        });
+      });
     }
   }
 }
