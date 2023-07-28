@@ -2188,3 +2188,69 @@
     font-weight: 500;
   }
 }
+/* about us */
+.banner-image.about-page {
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.55) 0%,
+      rgba(0, 0, 0, 0.55) 100%
+    ),
+    linear-gradient(0deg, rgba(33, 64, 43, 0.5) 0%, rgba(33, 64, 43, 0.5) 100%),
+    url(../data/about.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.about-container {
+  direction: rtl;
+  max-width: 1440px;
+  width: 100%;
+  padding: 2rem;
+  margin: 0 auto;
+}
+.about-container h6 {
+  text-align: right;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.about-text {
+  display: grid;
+  grid-template-areas:
+    " para1 imgArea"
+    "para2 para2";
+  gap: 0.5rem 1.6rem;
+}
+.about-paragraph {
+  width: 100%;
+  height: min-content;
+}
+.paragraph-1 {
+  grid-area: para1;
+}
+.paragraph-2 {
+  grid-area: para2;
+}
+.about-text p {
+  font-size: 1rem;
+  color: var(--Neutral-Gray-5);
+  text-align: justify;
+}
+.about-text img {
+  width: 100%;
+  grid-area: imgArea;
+  object-fit: cover;
+}
+@media screen and (min-width: 768px) {
+  .about-text {
+    gap: 0 1.6rem;
+    grid-template-areas:
+      "para1 imgArea"
+      "para2 imgArea";
+  }
+  .about-text p {
+    font-size: 2rem;
+  }
+  .about-text img {
+  }
+}
