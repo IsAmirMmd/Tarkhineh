@@ -2252,7 +2252,8 @@
 }
 .about-option .container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  gap: 2rem;
   padding: 1.2rem 2rem;
 }
 .about-option .about-option-panel {
@@ -2291,12 +2292,13 @@
   }
   .about-option .container {
     padding: 2.4rem;
+    justify-content: space-evenly;
   }
   .about-option svg {
     width: 48px;
     height: 48px;
   }
- .about-option .about-option-panel {
+  .about-option .about-option-panel {
     gap: 1.6rem;
     font-size: 1.8rem;
   }
