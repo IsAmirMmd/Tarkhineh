@@ -166,27 +166,166 @@
         </div>
       </nav>
     </header>
-    <!-- cart page -->
-    <section class="cart-container">
-      <!-- cart  -->
-      <div class="cart-details">
-        <div class="cart-in-phone">
-          <i class="cart--trash">
-            <img src="../src/data/trash.svg" alt="" />
-          </i>
-          <span class="">سبد خرید</span>
-          <i class="cart-arrow">
-            <img src="../src/data/arrow-right.svg" alt="" />
-          </i>
+    <!-- banner image -->
+    <section class="banner-image contribute">
+      <h4>همین الان به خانواده بزرگ ترخینه بپیوندید!</h4>
+    </section>
+
+    <!-- signs -->
+
+    <section class="container sign-container">
+      <div class="sign-box">
+        <div class="sign-box__img">
+          <img src="../src/data/bank.svg" alt="" />
         </div>
-        <div class="cart-in-desktop">
-          <img src="../src/data/cart-Position.svg" alt="" />
+        <p>بیش از 20 شعبه فعال در سراسر کشور</p>
+      </div>
+      <div class="sign-box">
+        <div class="sign-box__img">
+          <img src="../src/data/empty-wallet.svg" alt="" />
         </div>
+        <p>تسهیلات راه‌اندازی رستوران و تجهیز آن</p>
       </div>
-      <!-- cart box -->
-      <div class="cart-box">
-        <!-- using js -->
+      <div class="sign-box">
+        <div class="sign-box__img">
+          <img src="../src/data/chart.svg" alt="" />
+        </div>
+        <p>طرح‌های تشویقی ارتقای فروش</p>
       </div>
+      <div class="sign-box">
+        <div class="sign-box__img">
+          <img src="../src/data/book.svg" alt="" />
+        </div>
+        <p>اعطای دستورالعمل پخت غذاها</p>
+      </div>
+    </section>
+
+    <!-- divider -->
+    <hr class="hr-divider" />
+
+    <!-- benefit -->
+
+    <section class="container contribute-benefit">
+      <h4>مزیت دریافت نمایندگی</h4>
+      <ul class="benefit-list">
+        <li class="benefit-options">استفاده از برند شناخته شده ترخینه</li>
+        <li class="benefit-options">به حداقل رساندن ریسک سرمایه گذاری</li>
+        <li class="benefit-options">پشتیبانی بازاریابی و منابع انسانی</li>
+        <li class="benefit-options">تسریع روند بازگشت سرمایه</li>
+        <li class="benefit-options">مشاوره در امور حقوقی، مالی و مالیاتی</li>
+        <li class="benefit-options">طرح های تشویقی برای ارتقا فروش</li>
+        <li class="benefit-options">
+          دریافت مشاوره جهت تامین مواد اولیه و تجهیزات
+        </li>
+        <li class="benefit-options">مشاوره های تخصصی جهت مدیریت رستوران</li>
+      </ul>
+    </section>
+
+    <!-- divider -->
+    <hr class="hr-divider" />
+
+    <!-- support -->
+
+    <section class="support-contribute container">
+      <h4>دریافت مشاوره</h4>
+      <form>
+        <div class="input-holder">
+          <input type="text" placeholder="نام و نام خانوادگی" />
+          <input type="tel" placeholder="شماره تماس" />
+          <input
+            name="date"
+            type="text"
+            onfocus="(this.type='date')"
+            onblur="if(!this.value)this.type='text'"
+            placeholder="زمان ایده‌آل"
+          />
+        </div>
+        <button type="submit" class="link-btn">درخواست مشاوره</button>
+      </form>
+    </section>
+
+    <!-- divider -->
+    <hr class="hr-divider" />
+
+    <!-- form contribute -->
+    <section class="container form-contribute-container">
+      <form class="form-contribute">
+        <h4>فرم درخواست نمایندگی</h4>
+        <div class="form-contribute--box">
+          <p>مشخصات فردی متقاضی</p>
+          <div class="input-holder">
+            <input type="text" placeholder="نام و نام خانوادگی" />
+            <input type="text" placeholder="کدملی" />
+            <input type="text" placeholder="شماره تماس" />
+          </div>
+        </div>
+        <div class="form-contribute--box">
+          <p>آدرس ملک متقاضی</p>
+          <div class="input-holder">
+            <div class="input-holder--holder">
+              <input type="text" placeholder="استان" />
+              <input type="text" placeholder="شهر" />
+            </div>
+            <div class="input-holder--holder">
+              <input type="text" placeholder="منطقه" />
+              <textarea type="text" placeholder="آدرس دقیق"></textarea>
+            </div>
+            <div class="input-holder--image">
+              <img src="../src/data/Map.png" />
+            </div>
+          </div>
+        </div>
+        <div class="form-contribute--box">
+          <p>مشخصات ملک متقاضی</p>
+          <div class="input-holder">
+            <input type="text" placeholder="نوع مالکیت" />
+            <input type="text" placeholder="مساحت ملک (متر مربع)" />
+            <input type="text" placeholder="سن بنا" />
+          </div>
+        </div>
+        <div class="form-contribute--box">
+          <p>امکانات ملک متقاضی</p>
+          <div class="input-holder half-box">
+            <div>
+              <p
+                style="font-weight: 400; margin-bottom: 0.8rem"
+                class="label-mark"
+              >
+                ملک متقاضی:
+              </p>
+              <div class="checkbox-holder">
+                <div>
+                  <input type="checkbox" id="parvane" /><label for="parvane"
+                    >پروانه کسب دارد.</label
+                  >
+                </div>
+                <div>
+                  <input type="checkbox" id="kitchen" /><label for="kitchen"
+                    >آشپزخانه دارد.</label
+                  >
+                </div>
+                <div>
+                  <input type="checkbox" id="park" /><label for="park"
+                    >پارکینگ دارد.</label
+                  >
+                </div>
+                <div>
+                  <input type="checkbox" id="box" /><label for="box"
+                    >انبار دارد.</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div>
+              <label class="label-mark">تصاویر ملک:</label>
+              <input type="file" />
+            </div>
+          </div>
+        </div>
+        <div class="form-contribute--box btn-holder">
+          <button class="link-btn">ارسال اطلاعات</button>
+        </div>
+      </form>
     </section>
     <footer class="footer"></footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
