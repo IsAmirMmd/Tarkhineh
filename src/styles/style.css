@@ -2590,3 +2590,39 @@ ul.benefit-list .benefit-options::before {
   padding-bottom: 0.5rem;
   border-bottom: 1px solid var(--primary-color);
 }
+/* food chips */
+.menu-food--chips {
+  width: 100%;
+  direction: rtl;
+  padding: 0.8rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 0.8rem;
+  overflow-x: auto;
+}
+.menu-food--chips::-webkit-scrollbar {
+  display: none;
+}
+.menu-food--chips__item {
+  background: var(--Neutral-Gray-3);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: var(--Border-Radius-8);
+}
+.menu-food--chips__item svg {
+  width: 12px;
+}
+@media screen and (min-width: 768px) {
+  .menu-food--chips__item {
+    font-size: 1.4rem;
+    border-radius: var(--Border-Radius-64);
+  }
+  .menu-food--chips__item svg {
+    width: 16px;
+  }
+}
