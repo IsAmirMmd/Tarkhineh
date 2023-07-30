@@ -2493,7 +2493,7 @@ ul.benefit-list .benefit-options::before {
   border: none;
   margin-bottom: 1.6rem;
 }
-.hr-divider{
+.hr-divider {
   margin: 2.4rem auto;
   max-width: 1220px;
   width: 90%;
@@ -2502,7 +2502,7 @@ ul.benefit-list .benefit-options::before {
   border: none;
 }
 @media screen and (min-width: 768px) {
-  .sign-container{
+  .sign-container {
     margin-top: 4.8rem;
   }
   .sign-box {
@@ -2552,7 +2552,41 @@ ul.benefit-list .benefit-options::before {
   .support-contribute button.link-btn {
     margin: 2.4rem auto;
   }
-  .hr-divider{
+  .hr-divider {
     margin: 4.8rem auto;
   }
+}
+/* menu style */
+.container-slider.menu-slider .slide-1 {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.55) 0%,
+      rgba(0, 0, 0, 0.55) 100%
+    ),
+    linear-gradient(0deg, rgba(33, 64, 43, 0.5) 0%, rgba(33, 64, 43, 0.5) 100%),
+    url(../data/menuPage.jpg);
+  background-blend-mode: normal, overlay, normal;
+}
+.container-slider.menu-slider {
+  direction: rtl;
+}
+.menu-food--type {
+  direction: rtl;
+  display: flex;
+  gap: 1.6rem;
+  background-color: var(--Neutral-Gray-3);
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding: 0.5rem 2rem 0 2rem;
+  align-items: center;
+}
+.menu-food--link.active-link {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--primary-color);
 }
