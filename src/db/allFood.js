@@ -12,6 +12,7 @@ export const allFood = [
     offPrice: "209000",
     discount: "۸",
     image: "https://s8.uupload.ir/files/1_ojc8.jpg",
+    type: "iranian",
   },
   {
     id: 2,
@@ -26,6 +27,7 @@ export const allFood = [
     offPrice: "136000",
     discount: "۸",
     image: "https://s8.uupload.ir/files/2_rrsc.png",
+    type: "iranian",
   },
   {
     id: 3,
@@ -40,6 +42,7 @@ export const allFood = [
     offPrice: "177000",
     discount: "۱۷",
     image: "https://s8.uupload.ir/files/3_jz7k.png",
+    type: "foreign",
   },
   {
     id: 4,
@@ -54,6 +57,7 @@ export const allFood = [
     offPrice: "175000",
     discount: "۲۵",
     image: "https://s8.uupload.ir/files/4_eujl.jpg",
+    type: "pizza",
   },
   {
     id: 5,
@@ -68,6 +72,7 @@ export const allFood = [
     offPrice: "190000",
     discount: "۱۵",
     image: "https://s8.uupload.ir/files/5_sklb.png",
+    type: "iranian",
   },
   {
     id: 6,
@@ -82,6 +87,7 @@ export const allFood = [
     offPrice: "100000",
     discount: 0,
     image: "https://s8.uupload.ir/files/6_j5bs.png",
+    type: "pizza",
   },
   {
     id: 7,
@@ -96,5 +102,6 @@ export const allFood = [
     offPrice: "85000",
     discount: 0,
     image: "https://s8.uupload.ir/files/8_ae9i.png",
+    type: "foreign",
   },
 ];
