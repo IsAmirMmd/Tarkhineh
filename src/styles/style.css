@@ -2626,3 +2626,21 @@ ul.benefit-list .benefit-options::before {
     width: 16px;
   }
 }
+/* food menu */
+.menu-food .food__menu {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+.food-menu--recipe {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 25ch;
+}
+@media screen and (min-width: 768px) {
+  .menu-food .food__menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
