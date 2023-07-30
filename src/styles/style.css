@@ -2632,6 +2632,37 @@ ul.benefit-list .benefit-options::before {
   flex-direction: column;
   overflow-x: hidden;
 }
+.food__menu__item {
+  display: flex;
+  border-radius: var(--Border-Radius-8);
+  border: 1px solid var(--Neutral-Gray-7);
+}
+.food__menu--etc {
+  width: 100%;
+  padding: var(--Padding-ExtraMini);
+  display: flex;
+  flex-direction: column;
+}
+.food__menu__cta {
+  display: flex;
+  align-items: center;
+}
+.food__menu__cta .link-btn {
+  margin-right: auto;
+}
+.food__menu__details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.food__menu--image {
+  width: 150px;
+  aspect-ratio: 1;
+}
+.food__menu--image img {
+  width: 100%;
+  object-fit: cover;
+}
 .food-menu--recipe {
   white-space: nowrap;
   overflow: hidden;
