@@ -14,7 +14,8 @@ class menuPage {
   uiMenu() {
     for (const box in Menu) {
       const foodBox = Menu[box];
-      console.log(box, foodBox);
+      const foodFilter = foodBox.parentElement.classList[2].split("--")[0];
+      console.log(foodFilter, foodBox);
     }
   }
 }
