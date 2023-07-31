@@ -1,4 +1,6 @@
 import { allFood } from "../../db/allFood.js";
+import { Storage } from "../storage.js";
+import NavbarComponent from "./navbar.js";
 
 const Menu = {
   iranianFood: document.querySelector(".menu-food.iranian--food .food__menu"),
@@ -59,17 +61,53 @@ class menuPage {
                 <img src="../src/data/Star rate.svg" alt="" />
                 <img src="../src/data/Star rate.svg" alt="" />
               </div>
-              <button class="link-btn">افزودن به سبد خرید</button>
+              <button class="link-btn" data-id="${
+                food.id
+              }">افزودن به سبد خرید</button>
             </div>
           </div>
           </div>
         `;
         }
       });
-      
+
       foodBox.innerHTML = foodItem;
       foodItem = "";
     }
+
+    // checking cart --- >
+    this.checkCart();
+  }
+  checkCart() {
+    const addToCart = document.querySelectorAll(".link-btn");
+
+    const allCart = Storage.loadCart();
+    const convertedCart = [...allCart];
+
+    addToCart.forEach((element) => {
+      const id = parseInt(element.dataset.id);
+      let IsInCart = convertedCart.find((p) => p.id == id);
+      if (IsInCart) {
+        element.innerText = "اضافه شده";
+      }
+      element.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (Storage.loadCart().find((cart) => cart.id === id)) {
+          const updated = Storage.loadCart().filter((cart) => cart.id !== id);
+          Storage.addToCart(updated);
+          element.innerText = "افزودن به سبد خرید";
+        } else {
+          element.innerText = "اضافه شده";
+          allCart.push({
+            ...allFood.find((c) => c.id === id),
+            quantity: 1,
+          });
+          Storage.addToCart(allCart);
+        }
+        this.uiMenu();
+        new NavbarComponent().loadCart();
+      });
+    });
   }
 }
 
