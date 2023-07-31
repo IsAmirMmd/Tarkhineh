@@ -9,21 +9,30 @@ const searchBoxMobile = document.querySelector("#search-mobileBox");
 const buttonMobile = document.querySelector(".search-mobile-box-img");
 
 class SearchBox {
-  onSearch() {
-    searchBoxPC.addEventListener("change", (e) => {
-      console.log(e.target.value);
-    });
-  }
+  onSearch() {}
 
   doSearch() {
-    buttonPC.addEventListener("click", (e) => {
-      e.preventDefault();
-      if (searchBoxPC.value === "") {
-        alert("لطفا عبارتی وارد کنید!");
-        return;
+    if (window.location.pathname !== "/public/searchPage.html")
+      if (window.screen.width < 768) {
+        console.log(buttonMobile);
+        buttonMobile.addEventListener("click", (e) => {
+          e.preventDefault();
+          if (searchBoxMobile.value === "") {
+            alert("لطفا عبارتی وارد کنید!");
+            return;
+          }
+          window.location.href = `../public/searchPage.html?search=${searchBoxMobile.value}`;
+        });
+      } else {
+        buttonPC.addEventListener("click", (e) => {
+          e.preventDefault();
+          if (searchBoxPC.value === "") {
+            alert("لطفا عبارتی وارد کنید!");
+            return;
+          }
+          window.location.href = `../public/searchPage.html?search=${searchBoxPC.value}`;
+        });
       }
-      window.location.href = `../public/searchPage.html?search=${searchBoxPC.value}`;
-    });
   }
 
   searchResult() {
@@ -40,7 +49,7 @@ class SearchBox {
           searchComp.innerHTML = `
             <h3 class="no-result">موردی با این مشخصات پیدا نکردیم!</h3>
             <span class="no-result__span">${searchFilter}</span>
-            <img src="../src/data/noFood.svg" alt="no result" />
+            <img class="img-serach-result" src="../src/data/noFood.svg" alt="no result" />
             `;
         } else {
           foodResult += `

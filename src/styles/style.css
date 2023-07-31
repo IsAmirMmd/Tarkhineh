@@ -2748,6 +2748,7 @@ ul.benefit-list .benefit-options::before {
 }
 .no-result {
   font-size: 2rem;
+  text-align: center;
   font-weight: 400;
 }
 .no-result__span {
@@ -2765,6 +2766,7 @@ ul.benefit-list .benefit-options::before {
 .accept-result h3 {
   font-size: 2.4rem;
   font-weight: 700;
+  text-align: center;
 }
 .accept-result__span {
   margin: 0;
@@ -2778,11 +2780,18 @@ ul.benefit-list .benefit-options::before {
   justify-content: center;
   gap: 1.2rem;
 }
+.img-serach-result {
+  width: 65%;
+  aspect-ratio: 1;
+}
 @media screen and (min-width: 768px) {
   .search-result {
     padding: 4.8rem;
   }
   .food-search-result {
     gap: 2.4rem;
+  }
+  .img-serach-result{
+    width: fit-content;
   }
 }
