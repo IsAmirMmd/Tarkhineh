@@ -104,4 +104,19 @@ export const allFood = [
     image: "https://s8.uupload.ir/files/8_ae9i.png",
     type: "foreign",
   },
+  {
+    id: 7,
+    name: "ساندویچ کتلت",
+    description: [
+      { support: "گارانتی مادام العمر" },
+      { support: "ارسال رایگان" },
+      { support: "اورجینال" },
+      { star: "۵" },
+    ],
+    price: "85000",
+    offPrice: "80000",
+    discount: "۵",
+    image: "https://s8.uupload.ir/files/sandwich_9v4c.jpg",
+    type: "sandwich",
+  },
 ];
