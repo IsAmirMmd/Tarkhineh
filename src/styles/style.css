@@ -326,10 +326,12 @@
   padding-bottom: 0.4rem;
   transition: all 0.3s ease-in-out;
 }
-.header__link--item:hover a {
+.header__link--item:hover > a {
   color: var(--primary-color);
 }
-
+.header__link--item .place__dropdown a:hover {
+  color: var(--primary-color);
+}
 .header__cta {
   display: flex;
   gap: 0.8rem;
@@ -538,7 +540,7 @@
     max-height: 100vh;
     z-index: 10;
   }
-  .header__link--item:hover a {
+  .header__link--item:hover > a {
     color: var(--primary-color);
     font-weight: 600;
     border-bottom: 2px solid var(--primary-color);
