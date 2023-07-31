@@ -4,6 +4,7 @@ import NavbarComponent from "./components/navbar.js";
 import { Storage } from "./storage.js";
 import Cart from "./components/cart.js";
 import menuPage from "./components/FoodMenu.js";
+import SearchBox from "./components/SearchBar.js";
 // swiper library
 import swiper from "./components/swiper.js";
 
@@ -18,6 +19,8 @@ if (window.location.pathname === "/public/cart.html") {
   const cart = new Cart();
 }
 
+const searchbox = new SearchBox();
+
 if (window.location.pathname === "/public/menu.html") {
   const menu = new menuPage();
 }
@@ -27,6 +30,8 @@ const storage = new Storage();
 class app {
   constructor() {
     navbar.loadCart();
+    searchbox.onSearch();
+    searchbox.doSearch();
   }
 }
 export default new app();
