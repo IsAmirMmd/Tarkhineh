@@ -49,6 +49,7 @@ class SearchBox {
           searchComp.innerHTML = `
             <h3 class="no-result">موردی با این مشخصات پیدا نکردیم!</h3>
             <span class="no-result__span">${searchFilter}</span>
+            <a href="../index.html" class="back-link">بازگشت به صفحه اصلی</a>
             <img class="img-serach-result" src="../src/data/noFood.svg" alt="no result" />
             `;
         } else {

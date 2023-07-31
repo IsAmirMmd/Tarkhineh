@@ -2756,7 +2756,6 @@ ul.benefit-list .benefit-options::before {
   font-size: 2rem;
   font-weight: 600;
   margin-top: 1.2rem;
-  margin-bottom: 2.4rem;
 }
 .accept-result {
   display: flex;
@@ -2784,6 +2783,23 @@ ul.benefit-list .benefit-options::before {
   width: 65%;
   aspect-ratio: 1;
 }
+.back-link {
+  padding: 0.5rem 1.2rem;
+  text-decoration: none;
+  background-color: var(--Green-Green-Tint-1);
+  border-radius: 8px;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  margin-bottom: 2.4rem;
+  font-size: 2rem;
+  font-weight: 600;
+  transition: all 0.2s ease-out;
+}
+.back-link:hover {
+  color: var(--Green-Green-Tint-1);
+  border: 1px solid var(--primary-color);
+  background-color: var(--primary-color);
+}
 @media screen and (min-width: 768px) {
   .search-result {
     padding: 4.8rem;
@@ -2791,7 +2807,7 @@ ul.benefit-list .benefit-options::before {
   .food-search-result {
     gap: 2.4rem;
   }
-  .img-serach-result{
+  .img-serach-result {
     width: fit-content;
   }
 }
