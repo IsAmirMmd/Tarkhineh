@@ -2631,11 +2631,23 @@ ul.benefit-list .benefit-options::before {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 .food__menu__item {
   display: flex;
   border-radius: var(--Border-Radius-8);
   border: 1px solid var(--Neutral-Gray-7);
+}
+.food__menu--name {
+  display: flex;
+  margin-bottom: 8px;
+  justify-content: space-between;
+}
+.food__menu--name .food-box__price--discount {
+  margin-bottom: 0;
+}
+.food__menu--price .food-box__price--discount {
+  display: none;
 }
 .food__menu--etc {
   width: 100%;
@@ -2643,35 +2655,82 @@ ul.benefit-list .benefit-options::before {
   display: flex;
   flex-direction: column;
 }
+.food__menu--etc h5 {
+  font-size: 1.2rem;
+  line-height: 180%;
+  overflow: hidden;
+}
 .food__menu__cta {
   display: flex;
   align-items: center;
+  gap: 8px;
+  margin-top: auto;
 }
 .food__menu__cta .link-btn {
-  margin-right: auto;
+  border: none;
+  padding: 8px;
+  min-width: 74px;
+  width: 100%;
 }
 .food__menu__details {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 4px;
 }
 .food__menu--image {
-  width: 150px;
-  aspect-ratio: 1;
+  min-width: 92px;
+  max-width: 92px;
 }
 .food__menu--image img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
+  border-radius: 0 8px 8px 0;
 }
 .food-menu--recipe {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 25ch;
+  max-width: 20ch;
 }
-@media screen and (min-width: 768px) {
+.food__menu--favorite {
+  width: 16px;
+  height: 16px;
+}
+.food__menu__star {
+  display: flex;
+}
+@media screen and (min-width: 968px) {
   .menu-food .food__menu {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+  .food__menu__item {
+    width: auto;
+  }
+  .food__menu--name h5 {
+    font-size: 2rem;
+  }
+  .food-menu--recipe {
+    font-size: 1.4rem;
+    max-width: 30ch;
+    white-space: normal;
+  }
+  .food__menu--name .food-box__price--discount {
+    display: none;
+  }
+  .food__menu--price .food-box__price--discount {
+    display: flex;
+  }
+  .food__menu--image {
+    min-width: 150px;
+    max-width: 150px;
+  }
+  .food__menu__cta {
+    gap: 24px;
+  }
+  .food__menu--etc {
+    padding: 8px 16px;
   }
 }
