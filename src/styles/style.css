@@ -2736,3 +2736,53 @@ ul.benefit-list .benefit-options::before {
     padding: 8px 16px;
   }
 }
+/* search page */
+.search-result {
+  min-height: 70vh;
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.2rem;
+  justify-content: center;
+}
+.no-result {
+  font-size: 2rem;
+  font-weight: 400;
+}
+.no-result__span {
+  color: var(--primary-color);
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 1.2rem;
+  margin-bottom: 2.4rem;
+}
+.accept-result {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.4rem;
+}
+.accept-result h3 {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+.accept-result__span {
+  margin: 0;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+.food-search-result {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+}
+@media screen and (min-width: 768px) {
+  .search-result {
+    padding: 4.8rem;
+  }
+  .food-search-result {
+    gap: 2.4rem;
+  }
+}

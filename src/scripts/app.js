@@ -32,6 +32,9 @@ class app {
     navbar.loadCart();
     searchbox.onSearch();
     searchbox.doSearch();
+    if (window.location.pathname === "/public/searchPage.html") {
+      searchbox.searchResult();
+    }
   }
 }
 export default new app();
