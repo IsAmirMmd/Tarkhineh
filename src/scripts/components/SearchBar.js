@@ -12,7 +12,7 @@ class SearchBox {
   onSearch() {}
 
   doSearch() {
-    if (window.location.pathname !== "/public/searchPage.html")
+    if (!window.location.pathname.includes("/public/searchPage"))
       if (window.screen.width < 768) {
         console.log(buttonMobile);
         buttonMobile.addEventListener("click", (e) => {
@@ -36,7 +36,7 @@ class SearchBox {
   }
 
   searchResult() {
-    if (window.location.pathname === "/public/searchPage.html") {
+    if (window.location.pathname.includes("/public/searchPage")) {
       document.addEventListener("DOMContentLoaded", () => {
         const urlParams = new URLSearchParams(window.location.search);
         const searchFilter = urlParams.get("search");
