@@ -7,7 +7,7 @@ class Cart {
   }
 
   showCart() {
-    if (window.location.pathname.includes("/public/cart.html")) {
+    if (window.location.pathname.includes("/public/cart")) {
       const CartBox = document.querySelector(".cart-box");
       const CartList = Storage.loadCart();
       let cartString = "";

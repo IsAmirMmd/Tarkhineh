@@ -12,16 +12,16 @@ const navbar = new NavbarComponent();
 
 const footer = new Footer();
 
-if (window.location.pathname.includes("/public/foods")) {
+if (window.location.pathname.toLowerCase().includes("/public/foods")) {
   const food = new Food();
 }
-if (window.location.pathname.includes("/public/cart.html")) {
+if (window.location.pathname.toLowerCase().includes("/public/cart")) {
   const cart = new Cart();
 }
 
 const searchbox = new SearchBox();
 
-if (window.location.pathname.includes("/public/menu.html")) {
+if (window.location.pathname.toLowerCase().includes("/public/menu")) {
   const menu = new menuPage();
 }
 
@@ -32,7 +32,7 @@ class app {
     navbar.loadCart();
     searchbox.onSearch();
     searchbox.doSearch();
-    if (window.location.pathname.includes("/public/searchPage.html")) {
+    if (window.location.pathname.toLowerCase().includes("/public/searchpage")) {
       searchbox.searchResult();
     }
   }
