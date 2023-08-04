@@ -5,6 +5,7 @@ import { Storage } from "./storage.js";
 import Cart from "./components/cart.js";
 import menuPage from "./components/FoodMenu.js";
 import SearchBox from "./components/SearchBar.js";
+import loginVerificationCode from "./components/loginVerification.js";
 // swiper library
 import swiper from "./components/swiper.js";
 
@@ -14,27 +15,33 @@ const footer = new Footer();
 
 if (window.location.pathname.toLowerCase().includes("/public/foods")) {
   const food = new Food();
+  food;
 }
 if (window.location.pathname.toLowerCase().includes("/public/cart")) {
   const cart = new Cart();
+  cart;
 }
 
 const searchbox = new SearchBox();
 
 if (window.location.pathname.toLowerCase().includes("/public/menu")) {
   const menu = new menuPage();
+  menu;
 }
-
 const storage = new Storage();
-
+const Login = new loginVerificationCode();
 class app {
   constructor() {
+    swiper;
     navbar.loadCart();
     searchbox.onSearch();
     searchbox.doSearch();
+    storage;
+    Login;
     if (window.location.pathname.toLowerCase().includes("/public/searchpage")) {
       searchbox.searchResult();
     }
+    footer;
   }
 }
 export default new app();

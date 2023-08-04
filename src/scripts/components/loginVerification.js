@@ -1,28 +1,6 @@
-const formPageBox = document.querySelector(".login-page-form");
-const closeModalLoginForm = document.querySelector(".login-page-close-modal");
-
-closeModalLoginForm.addEventListener("click",()=>{
-    // close modal
-})
-
 let phoneNumber = "";
 
 let errorInput = false;
-
-addEventListener("DOMContentLoaded", () => {
-  formPageBox.innerHTML = formType.snippetCodeFirst(); // first load
-
-  const phoneInput = document.querySelector("#phone-input");
-  const changeButton = document.querySelector("#login-button");
-
-  changeButton.disabled = true;
-
-  phoneInput.addEventListener("input", (e) => {
-    if (phoneInput.value.length > 10) changeButton.disabled = false;
-    else changeButton.disabled = true;
-    phoneNumber = e.target.value;
-  });
-});
 
 function nextInput() {
   const inputElements = [...document.querySelectorAll("input.code-input")];
@@ -44,20 +22,6 @@ function nextInput() {
       }
     });
   });
-}
-
-function changeForm(event) {
-  event.preventDefault();
-  setTimeout(() => {
-    formPageBox.innerHTML = formType.snippetCodeSecond(phoneNumber);
-    nextInput();
-  }, 1000);
-  formPageBox.innerHTML = "<p>لطفا صبر کنید ...</p>";
-}
-
-function onSubmit(e) {
-  e.preventDefault();
-  window.location.href = "../index.html";
 }
 
 let formString = "";
@@ -84,7 +48,6 @@ const formType = {
         <button
             class="link-btn"
             id="login-button"
-            onclick="changeForm(event)"
         >
             ورود
         </button>
@@ -137,8 +100,7 @@ const formType = {
         <div>
         <button
             class="link-btn"
-            id="login-button"
-            onclick="onSubmit(event)"
+            id="code-button"
         >
             تایید
         </button>
@@ -147,3 +109,64 @@ const formType = {
     `;
   },
 };
+
+class loginVerificationCode {
+  constructor() {
+    this.createBodyLogin();
+
+    const formPageBox = document.querySelector(".login-page-form");
+
+    formPageBox.innerHTML = formType.snippetCodeFirst(); // first load
+
+    const phoneInput = document.querySelector("#phone-input");
+    const changeButton = document.querySelector("#login-button");
+    this.checkOnClick(changeButton, formPageBox);
+
+    changeButton.disabled = true;
+
+    phoneInput.addEventListener("input", (e) => {
+      if (phoneInput.value.length > 10) changeButton.disabled = false;
+      else changeButton.disabled = true;
+      phoneNumber = e.target.value;
+    });
+  }
+  createBodyLogin() {
+    const body = document.body;
+    const loginPageModal = document.createElement("section");
+    loginPageModal.classList.add("login-page-modal");
+    body.appendChild(loginPageModal);
+    loginPageModal.innerHTML = `
+        <span class="login-page-close-modal">X</span>
+        <div class="login-page-img">
+            <img src="../src/data/full-logo.svg" alt="" />
+        </div>
+        <div class="login-page-form">
+        </div>
+    `;
+    const closeModalLoginForm = document.querySelector(
+      ".login-page-close-modal"
+    );
+
+    closeModalLoginForm.addEventListener("click", () => {
+      // close modal
+    });
+  }
+
+  checkOnClick(element, parent) {
+    element.addEventListener("click", (event) => {
+      event.preventDefault();
+      setTimeout(() => {
+        parent.innerHTML = formType.snippetCodeSecond(phoneNumber);
+        nextInput();
+        const codeButton = document.querySelector("#code-button");
+        codeButton.addEventListener("click", (e) => {
+          e.preventDefault();
+          window.location.href = "../index.html";
+        });
+      }, 1000);
+      parent.innerHTML = "<p>لطفا صبر کنید ...</p>";
+    });
+  }
+}
+
+export default loginVerificationCode;
