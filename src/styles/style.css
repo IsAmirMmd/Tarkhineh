@@ -2830,17 +2830,44 @@ ul.benefit-list .benefit-options::before {
   left: 15px;
 }
 .login-page-form {
+  min-width: 300px;
   max-width: 320px;
+}
+.login-page-form h3 {
+  font-size: 1.6rem;
+  margin-top: 8rem;
+  margin-bottom: 2.4rem;
+}
+.login-page-form p {
+  font-size: 1.4rem;
+  color: #717171;
+  margin-bottom: 2.4rem;
+}
+.login-page-form span {
+  display: block;
+  font-size: 1rem;
+  margin-top: 0.8rem;
 }
 .input-login-holder {
   position: relative;
   display: flex;
   direction: ltr;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 2.4rem;
 }
 .input-login-holder input {
   direction: ltr;
   width: 100%;
   padding: 0.5rem 1rem;
+  font-size: 1.6rem;
+  outline: 0;
+  border: 1px solid var(--Neutral-Gray-7);
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+.input-login-holder input:focus {
+  border: 1px solid var(--Neutral-Gray-6);
 }
 .input-login-holder label {
   top: 50%;
@@ -2849,14 +2876,18 @@ ul.benefit-list .benefit-options::before {
   display: block;
   position: absolute;
   transition: all 0.3s ease-in-out;
+  font-size: 1.2rem;
+  color: var(--Neutral-Gray-5);
 }
 .input-login-holder input:focus + label {
   background-color: #fff;
   top: 0;
+  color: var(--Neutral-Gray-6);
 }
 .login-page-form .link-btn {
+  border-radius: 4px;
   width: 100%;
-  padding: 0;
+  padding: 8px 16px;
   border: 0;
 }
 .link-btn:disabled,
@@ -2864,4 +2895,22 @@ ul.benefit-list .benefit-options::before {
   background-color: var(--Neutral-Gray-3);
   color: var(--Neutral-Gray-7);
   cursor: not-allowed;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.input-login-holder input.code-input {
+  border-radius: 4px;
+  border: 1px solid var(--Neutral-Gray-5);
+  padding: 0;
+  height: 30px;
+  outline: 0;
+}
+input.code-input:focus {
+  border: 1px solid var(--primary-color);
 }

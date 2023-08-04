@@ -26,78 +26,9 @@
         <img src="../src/data/full-logo.svg" alt="" />
       </div>
       <div class="login-page-form">
-        <h3>ورود / ثبت‌نام</h3>
-        <p>شماره همراه خود را وارد کنید.</p>
-        <form>
-          <div class="input-login-holder">
-            <input type="text" id="phone-input" /><label for="phone-input"
-              >شماره همراه</label
-            >
-          </div>
-          <div>
-            <button
-              class="link-btn"
-              id="login-button"
-              onclick="changeForm(number)"
-              disabled
-            >
-              ورود
-            </button>
-          </div>
-        </form>
-        <p>ورود و عضویت در ترخینه به منزله قبول قوانین و مقررات است.</p>
-      </div>
-      <div class="login-page-form" style="display: none">
-        <h3>کد تایید</h3>
-        <p>کد تایید پنج‌رقمی به شماره ${شماره_تلفن} ارسال شد.</p>
-        <form>
-          <div class="input-login-holder">
-            <input
-              name="code"
-              class="code-input"
-              style="text-align: center"
-              required
-            />
-            <input
-              name="code"
-              class="code-input"
-              style="text-align: center"
-              required
-            />
-            <input
-              name="code"
-              class="code-input"
-              style="text-align: center"
-              required
-            />
-            <input
-              name="code"
-              class="code-input"
-              style="text-align: center"
-              required
-            />
-            <input
-              name="code"
-              class="code-input"
-              style="text-align: center"
-              required
-            />
-          </div>
-          <div>
-            <button
-              class="link-btn"
-              id="login-button"
-              onclick="onSubmit(event)"
-            >
-              تایید
-            </button>
-          </div>
-        </form>
-        <p>ورود و عضویت در ترخینه به منزله قبول قوانین و مقررات است.</p>
       </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="../src/scripts/main.js" type="module"></script>
     <script src="../src/scripts/components/loginVerification.js"></script>
   </body>
 </html>
