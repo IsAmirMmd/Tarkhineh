@@ -2854,7 +2854,6 @@ ul.benefit-list .benefit-options::before {
   direction: ltr;
   justify-content: space-between;
   gap: 16px;
-  margin-bottom: 2.4rem;
 }
 .input-login-holder input {
   direction: ltr;
@@ -2887,7 +2886,7 @@ ul.benefit-list .benefit-options::before {
 .login-page-form .link-btn {
   border-radius: 4px;
   width: 100%;
-  padding: 8px 16px;
+  padding: 6px 16px;
   border: 0;
 }
 .link-btn:disabled,
@@ -2908,9 +2907,21 @@ input[type="number"] {
   border-radius: 4px;
   border: 1px solid var(--Neutral-Gray-5);
   padding: 0;
-  height: 30px;
+  height: 40px;
   outline: 0;
 }
 input.code-input:focus {
   border: 1px solid var(--primary-color);
+}
+span.error-form {
+  text-align: right;
+  color: var(--State-Error-Error);
+  margin: 0.6rem;
+  margin-right: 0;
+}
+.login-page-form span a{
+  color: var(--primary-color);
+}
+.code-verification .input-login-holder{
+  margin-bottom: 2.4rem;
 }

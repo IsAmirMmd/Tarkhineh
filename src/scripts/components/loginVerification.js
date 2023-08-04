@@ -69,7 +69,11 @@ const formType = {
             >شماره همراه</label
         >
         </div>`;
-    formString += `${errorInput ? "<p>پر کردن این فرم الزامی است!</p>" : ""}`;
+    formString += `${
+      errorInput
+        ? `<span class="error-form">پر کردن این فرم الزامی است!</span>`
+        : `<span class="error-form"></span>`
+    }`;
     formString += `
         <div>
         <button
@@ -81,7 +85,9 @@ const formType = {
         </button>
         </div>
     </form>
-    <span>ورود و عضویت در ترخینه به منزله قبول قوانین و مقررات است.</span>
+    <span>
+    ورود و عضویت در ترخینه به منزله قبول <a href="#">قوانین و مقررات</a> است.
+    </span>
   `;
 
     return formString;
@@ -90,7 +96,7 @@ const formType = {
     return `
     <h3>کد تایید</h3>
     <p>کد تایید پنج‌رقمی به شماره ${phoneNumber} ارسال شد.</p>
-    <form>
+    <form class="code-verification">
         <div class="input-login-holder">
         <input
             name="code"
