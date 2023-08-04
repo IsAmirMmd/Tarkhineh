@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../src/styles/style.css" />
+    <link rel="stylesheet" href="../src/styles/font.css" />
+    <!-- slider cdn  -->
+    <link rel="stylesheet" href="../src/libraries/swiper/swiper.min.css" />
+    <!-- font awsome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Tarkhineh | ورود</title>
+  </head>
+  <body>
+    <section class="login-page-modal">
+      <span class="login-page-close-modal">X</span>
+      <div class="login-page-img">
+        <img src="../src/data/full-logo.svg" alt="" />
+      </div>
+      <div class="login-page-form" style="display: none">
+        <h3>ورود / ثبت‌نام</h3>
+        <p>شماره همراه خود را وارد کنید.</p>
+        <form>
+          <div class="input-login-holder">
+            <input type="text" id="phone-input" /><label for="phone-input"
+              >شماره همراه</label
+            >
+          </div>
+          <div>
+            <button class="link-btn" id="login-button" disabled>ورود</button>
+          </div>
+        </form>
+        <p>ورود و عضویت در ترخینه به منزله قبول قوانین و مقررات است.</p>
+      </div>
+      <div class="login-page-form">
+        <h3>کد تایید</h3>
+        <p>کد تایید پنج‌رقمی به شماره ${شماره_تلفن} ارسال شد.</p>
+        <form>
+          <div class="input-login-holder">
+            <input name="code" class="code-input" required />
+            <input name="code" class="code-input" required />
+            <input name="code" class="code-input" required />
+            <input name="code" class="code-input" required />
+            <input name="code" class="code-input" required />
+          </div>
+          <div>
+            <button class="link-btn" id="login-button" disabled>تایید</button>
+          </div>
+        </form>
+        <p>ورود و عضویت در ترخینه به منزله قبول قوانین و مقررات است.</p>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="../src/scripts/main.js" type="module"></script>
+  </body>
+</html>

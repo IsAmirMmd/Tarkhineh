@@ -2811,3 +2811,56 @@ ul.benefit-list .benefit-options::before {
     width: fit-content;
   }
 }
+/* login page modal */
+.login-page-modal {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  direction: rtl;
+  text-align: center;
+}
+.login-page-close-modal {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+.login-page-form {
+  max-width: 320px;
+}
+.input-login-holder {
+  position: relative;
+  display: flex;
+}
+.input-login-holder input {
+  direction: ltr;
+  width: 100%;
+  padding: 0.5rem 1rem;
+}
+.input-login-holder label {
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  display: block;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+}
+.input-login-holder input:focus + label {
+  background-color: #fff;
+  top: 0;
+}
+.login-page-form .link-btn {
+  width: 100%;
+  padding: 0;
+  border: 0;
+}
+.link-btn:disabled,
+.link-btn[disabled] {
+  background-color: var(--Neutral-Gray-3);
+  color: var(--Neutral-Gray-7);
+  cursor: not-allowed;
+}
