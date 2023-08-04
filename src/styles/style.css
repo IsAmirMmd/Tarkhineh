@@ -2835,6 +2835,7 @@ ul.benefit-list .benefit-options::before {
 .input-login-holder {
   position: relative;
   display: flex;
+  direction: ltr;
 }
 .input-login-holder input {
   direction: ltr;
