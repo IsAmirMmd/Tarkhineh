@@ -1,4 +1,9 @@
 const formPageBox = document.querySelector(".login-page-form");
+const closeModalLoginForm = document.querySelector(".login-page-close-modal");
+
+closeModalLoginForm.addEventListener("click",()=>{
+    // close modal
+})
 
 let phoneNumber = "";
 

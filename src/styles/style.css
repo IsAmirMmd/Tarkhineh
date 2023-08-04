@@ -2905,13 +2905,13 @@ input[type="number"] {
 }
 .input-login-holder input.code-input {
   border-radius: 4px;
-  border: 1px solid var(--Neutral-Gray-5);
+  border: 2px solid var(--Neutral-Gray-5);
   padding: 0;
   height: 40px;
   outline: 0;
 }
 input.code-input:focus {
-  border: 1px solid var(--primary-color);
+  border: 2px solid var(--primary-color);
 }
 span.error-form {
   text-align: right;
