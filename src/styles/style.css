@@ -2815,13 +2815,14 @@ ul.benefit-list .benefit-options::before {
 .login-page-modal {
   width: 100vw;
   height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
   background-color: #fff;
   display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
-  transform: translate(-50%, -50%);
   direction: rtl;
   text-align: center;
   z-index: 11;
@@ -2955,6 +2956,7 @@ span.error-form {
     position: fixed;
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
   }
   .login-page-form h3 {
     margin-top: 1.2rem;
