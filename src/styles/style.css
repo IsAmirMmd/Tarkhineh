@@ -2824,7 +2824,6 @@ ul.benefit-list .benefit-options::before {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border-radius: 8px;
   direction: rtl;
   text-align: center;
   z-index: 11;
@@ -2845,8 +2844,12 @@ ul.benefit-list .benefit-options::before {
 }
 .login-page-close-modal {
   position: absolute;
-  top: 15px;
+  top: 5px;
   left: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  z-index: 12;
 }
 .login-page-form {
   min-width: 300px;
@@ -2944,19 +2947,19 @@ span.error-form {
 .code-verification .input-login-holder {
   margin-bottom: 2.4rem;
 }
-.login-page-close-modal{
-  font-size: 2rem;
-  cursor: pointer;
-  font-weight: 500;
-}
+
 @media screen and (min-width: 768px) {
   .login-page-modal {
     padding: 3rem;
     width: auto;
+    border-radius: 8px;
     height: auto;
   }
-  .login-page-form h3{
+  .login-page-form h3 {
     margin-top: 1.2rem;
     margin-bottom: 0;
+  }
+  .login-page-close-modal {
+    top: 15px;
   }
 }
