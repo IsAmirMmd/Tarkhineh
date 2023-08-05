@@ -161,7 +161,6 @@ class loginVerificationCode {
       element.addEventListener("click", () => {
         loginPageModal.classList.remove("active-modal");
         backDropBG.style.display = "none";
-        body.style.overflow = "auto";
       });
     });
     openLoginModal.addEventListener("click", (e) => {
@@ -169,7 +168,6 @@ class loginVerificationCode {
       loginPageModal.classList.add("active-modal");
       profileMenu.classList.remove("active");
       backDropBG.style.display = "block";
-      window.screen.width < 768 ? (body.style.overflow = "hidden") : null;
     });
   }
 
