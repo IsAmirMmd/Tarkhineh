@@ -1,3 +1,9 @@
+const profileMenu = document.querySelector(".profile__menu");
+var parentOfUL = document.querySelector(
+  ".place__dropdown.profile__menu .place__dropdown__UL"
+);
+const openLoginModal = parentOfUL.firstElementChild.firstElementChild;
+
 let phoneNumber = "";
 
 let errorInput = false;
@@ -148,7 +154,14 @@ class loginVerificationCode {
     );
 
     closeModalLoginForm.addEventListener("click", () => {
-      // close modal
+      loginPageModal.classList.remove("active-modal");
+      body.style.overflow = "auto";
+    });
+    openLoginModal.addEventListener("click", (e) => {
+      e.preventDefault();
+      loginPageModal.classList.add("active-modal");
+      profileMenu.classList.remove("active");
+      body.style.overflow = "hidden";
     });
   }
 

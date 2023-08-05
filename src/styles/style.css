@@ -2816,13 +2816,19 @@ ul.benefit-list .benefit-options::before {
   width: 100vw;
   height: 100vh;
   background-color: #fff;
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   direction: rtl;
   text-align: center;
+  z-index: 11;
+}
+.login-page-modal.active-modal {
+  display: flex;
 }
 .login-page-close-modal {
   position: absolute;
@@ -2919,9 +2925,9 @@ span.error-form {
   margin: 0.6rem;
   margin-right: 0;
 }
-.login-page-form span a{
+.login-page-form span a {
   color: var(--primary-color);
 }
-.code-verification .input-login-holder{
+.code-verification .input-login-holder {
   margin-bottom: 2.4rem;
 }
