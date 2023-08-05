@@ -2843,7 +2843,6 @@ ul.benefit-list .benefit-options::before {
   backdrop-filter: blur(2px);
 }
 .login-page-close-modal {
-  position: absolute;
   top: 5px;
   left: 15px;
   font-size: 1.5rem;
