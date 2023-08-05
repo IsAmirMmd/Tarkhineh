@@ -2820,9 +2820,7 @@ ul.benefit-list .benefit-options::before {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: fixed;
-  top: 50%;
-  left: 50%;
+  position: relative;
   transform: translate(-50%, -50%);
   direction: rtl;
   text-align: center;
@@ -2849,7 +2847,6 @@ ul.benefit-list .benefit-options::before {
   font-size: 1.5rem;
   cursor: pointer;
   font-weight: 500;
-  background-color: red;
   z-index: 12;
 }
 .login-page-form {
@@ -2955,6 +2952,9 @@ span.error-form {
     width: auto;
     border-radius: 8px;
     height: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
   }
   .login-page-form h3 {
     margin-top: 1.2rem;

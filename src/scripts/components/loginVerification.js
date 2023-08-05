@@ -169,7 +169,7 @@ class loginVerificationCode {
       loginPageModal.classList.add("active-modal");
       profileMenu.classList.remove("active");
       backDropBG.style.display = "block";
-      window.screen.width < 768 ? (body.style.overflow = "hidden") : "";
+      window.screen.width < 768 ? (body.style.overflow = "hidden") : null;
     });
   }
 
