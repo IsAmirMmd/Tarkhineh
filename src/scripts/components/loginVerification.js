@@ -168,7 +168,7 @@ class loginVerificationCode {
       e.preventDefault();
       loginPageModal.classList.add("active-modal");
       profileMenu.classList.remove("active");
-      backDropBG.style.display = "block";
+      // backDropBG.style.display = "block";
       window.screen.width < 768 ? (body.style.overflow = "hidden") : null;
     });
   }
