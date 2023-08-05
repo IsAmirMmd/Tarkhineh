@@ -2820,15 +2820,28 @@ ul.benefit-list .benefit-options::before {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
   direction: rtl;
   text-align: center;
   z-index: 11;
 }
 .login-page-modal.active-modal {
   display: flex;
+}
+.backDropBG {
+  display: none;
+  width: 100%;
+  min-height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  backdrop-filter: blur(2px);
 }
 .login-page-close-modal {
   position: absolute;
@@ -2930,4 +2943,20 @@ span.error-form {
 }
 .code-verification .input-login-holder {
   margin-bottom: 2.4rem;
+}
+.login-page-close-modal{
+  font-size: 2rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+@media screen and (min-width: 768px) {
+  .login-page-modal {
+    padding: 3rem;
+    width: auto;
+    height: auto;
+  }
+  .login-page-form h3{
+    margin-top: 1.2rem;
+    margin-bottom: 0;
+  }
 }

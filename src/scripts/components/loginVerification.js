@@ -138,6 +138,10 @@ class loginVerificationCode {
   }
   createBodyLogin() {
     const body = document.body;
+    const backDropBG = document.createElement("div");
+    backDropBG.classList.add("backDropBG");
+    body.appendChild(backDropBG);
+
     const loginPageModal = document.createElement("section");
     loginPageModal.classList.add("login-page-modal");
     body.appendChild(loginPageModal);
@@ -153,15 +157,19 @@ class loginVerificationCode {
       ".login-page-close-modal"
     );
 
-    closeModalLoginForm.addEventListener("click", () => {
-      loginPageModal.classList.remove("active-modal");
-      body.style.overflow = "auto";
+    [closeModalLoginForm, backDropBG].forEach((element) => {
+      element.addEventListener("click", () => {
+        loginPageModal.classList.remove("active-modal");
+        backDropBG.style.display = "none";
+        body.style.overflow = "auto";
+      });
     });
     openLoginModal.addEventListener("click", (e) => {
       e.preventDefault();
       loginPageModal.classList.add("active-modal");
       profileMenu.classList.remove("active");
-      body.style.overflow = "hidden";
+      backDropBG.style.display = "block";
+      window.screen.width < 768 ? (body.style.overflow = "hidden") : null;
     });
   }
 
