@@ -2973,9 +2973,7 @@ span.error-form {
   color: inherit;
 }
 .checkout-page.cart-box {
-  border: 1px solid var(--Neutral-Gray-7);
-  border-radius: var(--Border-Radius-8);
-  padding: var(--Padding-Medium);
+  border: 0;
 }
 .checkout-page .cart-box__list {
   border: 0;
@@ -3024,19 +3022,23 @@ span.error-form {
 
 .cart-list-item {
   width: 100%;
+  border: 1px solid var(--Neutral-Gray-7);
+  border-radius: var(--Border-Radius-8);
+  padding: var(--Padding-Medium);
   grid-area: item;
 }
 
 @media screen and (min-width: 768px) {
   .checkout-page.cart-box {
+    border: 0;
     display: grid;
     direction: ltr;
     grid-template-areas:
-    "item delivery"
-    "item address"
-    "item note";
+      "item delivery"
+      "item address"
+      "item note";
   }
   .cart-list-item {
-    width: 35%;
+    width: 40%;
   }
 }
