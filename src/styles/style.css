@@ -3010,18 +3010,26 @@ span.error-form {
 }
 .cart-list-delivery {
   grid-area: delivery;
+  border: 1px solid var(--Neutral-Gray-7);
+  border-radius: var(--Border-Radius-8);
+  padding: var(--Padding-Medium);
 }
 
 .cart-list-address {
   grid-area: address;
+  border: 1px solid var(--Neutral-Gray-7);
+  border-radius: var(--Border-Radius-8);
+  padding: var(--Padding-Medium);
 }
 
 .cart-list-note {
   grid-area: note;
+  border: 1px solid var(--Neutral-Gray-7);
+  border-radius: var(--Border-Radius-8);
+  padding: var(--Padding-Medium);
 }
 
 .cart-list-item {
-  width: 100%;
   border: 1px solid var(--Neutral-Gray-7);
   border-radius: var(--Border-Radius-8);
   padding: var(--Padding-Medium);
@@ -3030,15 +3038,12 @@ span.error-form {
 
 @media screen and (min-width: 768px) {
   .checkout-page.cart-box {
-    border: 0;
     display: grid;
     direction: ltr;
+    grid-template-columns: 1fr 2fr;
     grid-template-areas:
       "item delivery"
       "item address"
       "item note";
-  }
-  .cart-list-item {
-    width: 40%;
   }
 }
