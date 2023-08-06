@@ -2966,3 +2966,9 @@ span.error-form {
     top: 15px;
   }
 }
+/* checkout page */
+.cta-link-checkout {
+  display: flex;
+  align-items: center;
+  color: inherit;
+}
