@@ -18,7 +18,6 @@ class SearchBox {
         !window.location.pathname.toLowerCase().includes("completepayment") &&
         !window.location.pathname.toLowerCase().includes("cart")
       ) {
-        console.log(buttonMobile);
         buttonMobile.addEventListener("click", (e) => {
           e.preventDefault();
           if (searchBoxMobile.value === "") {
@@ -72,7 +71,6 @@ class SearchBox {
                     </div>
                     `;
             foodResult += `<div class="food-name">${food.name}</div>`;
-            food.discount === 0 && console.log(food.name);
             foodResult += `
                 <div class="food-box">
                   <div class="food-box__fav">
