@@ -35,6 +35,7 @@ const Login = new loginVerificationCode();
 if (window.location.pathname.toLowerCase().includes("complete")) {
   const payment = new Payment();
   payment.showCartItem();
+  payment.calculatePrice();
 }
 class app {
   constructor() {
