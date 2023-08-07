@@ -3038,6 +3038,7 @@ span.error-form {
   grid-area: note;
   border: 1px solid var(--Neutral-Gray-7);
   border-radius: var(--Border-Radius-8);
+  direction: rtl;
 }
 
 .cart-list-item {
@@ -3120,6 +3121,20 @@ span.error-form {
   justify-content: space-between;
   flex-direction: row-reverse;
   color: var(--Neutral-Gray-5);
+}
+.note-bar {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  color: var(--Neutral-Gray-5);
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid var(--Neutral-Gray-7);
+}
+.note-bar span {
+  font-size: 1.2rem;
+}
+.note-list{
+  min-height: 100px;
 }
 @media screen and (min-width: 768px) {
   .checkout-page.cart-box {
