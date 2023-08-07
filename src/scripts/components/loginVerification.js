@@ -164,10 +164,12 @@ class loginVerificationCode {
       });
     });
     openLoginModal.addEventListener("click", (e) => {
-      e.preventDefault();
-      loginPageModal.classList.add("active-modal");
-      profileMenu.classList.remove("active");
-      backDropBG.style.display = "block";
+      if (openLoginModal.innerText === "ورود/ثبت نام") {
+        e.preventDefault();
+        loginPageModal.classList.add("active-modal");
+        profileMenu.classList.remove("active");
+        backDropBG.style.display = "block";
+      }
     });
   }
 
@@ -180,7 +182,7 @@ class loginVerificationCode {
         const codeButton = document.querySelector("#code-button");
         codeButton.addEventListener("click", (e) => {
           e.preventDefault();
-          localStorage.setItem("loginToken", phoneNumber);
+          localStorage.setItem("loginToken", JSON.stringify(phoneNumber));
           window.location.href = "../index.html";
         });
       }, 1000);
