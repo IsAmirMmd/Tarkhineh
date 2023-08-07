@@ -41,6 +41,7 @@ class app {
   constructor() {
     swiper;
     navbar.loadCart();
+    navbar.checkLogin();
     searchbox.onSearch();
     searchbox.doSearch();
     storage;

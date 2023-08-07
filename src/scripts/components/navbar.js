@@ -55,6 +55,12 @@ class NavbarComponent {
     `;
     navbarCart.innerHTML = cartLink + cartImage + cartSpan + `</a>`;
   }
+
+  checkLogin() {
+    JSON.parse(localStorage.getItem("loginToken"))
+      ? (openLoginModal.innerText = "پنل کاربری")
+      : (openLoginModal.innerText = "ورود/ثبت نام");
+  }
 }
 
 export default NavbarComponent;
