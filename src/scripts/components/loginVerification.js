@@ -180,6 +180,7 @@ class loginVerificationCode {
         const codeButton = document.querySelector("#code-button");
         codeButton.addEventListener("click", (e) => {
           e.preventDefault();
+          localStorage.setItem("loginToken", phoneNumber);
           window.location.href = "../index.html";
         });
       }, 1000);
