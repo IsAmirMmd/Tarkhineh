@@ -108,7 +108,7 @@ class Cart {
             <span class="price-unit">${totalPrice}</span>
           </div>
           <button class="cta--complete-data link-btn">
-           <a class="cta-link-checkout" href="./checkout.html"> <img src="../src/data/arrow-left.svg" alt="" />
+           <a class="cta-link-checkout" href="./completepayment.html"> <img src="../src/data/arrow-left.svg" alt="" />
             تکمیل اطلاعات </a>
           </button>
         </div> 
