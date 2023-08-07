@@ -8,6 +8,7 @@ import SearchBox from "./components/SearchBar.js";
 import loginVerificationCode from "./components/loginVerification.js";
 // swiper library
 import swiper from "./components/swiper.js";
+import Payment from "./components/payment.js";
 
 const navbar = new NavbarComponent();
 
@@ -30,6 +31,11 @@ if (window.location.pathname.toLowerCase().includes("/public/menu")) {
 }
 const storage = new Storage();
 const Login = new loginVerificationCode();
+
+if (window.location.pathname.toLowerCase().includes("complete")) {
+  const payment = new Payment();
+  payment.showCartItem();
+}
 class app {
   constructor() {
     swiper;
