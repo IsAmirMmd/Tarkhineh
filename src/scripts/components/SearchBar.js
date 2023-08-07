@@ -13,7 +13,11 @@ class SearchBox {
 
   doSearch() {
     if (!window.location.pathname.toLowerCase().includes("/public/searchpage"))
-      if (window.screen.width < 768) {
+      if (
+        window.screen.width < 768 &&
+        !window.location.pathname.toLowerCase().includes("completepayment") &&
+        !window.location.pathname.toLowerCase().includes("cart")
+      ) {
         console.log(buttonMobile);
         buttonMobile.addEventListener("click", (e) => {
           e.preventDefault();
