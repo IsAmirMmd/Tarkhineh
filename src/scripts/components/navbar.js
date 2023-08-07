@@ -10,6 +10,10 @@ const navbarCart = document.querySelector(".cta--cart");
 const searchButton = document.querySelector(".cta--search");
 const closeSearch = document.querySelector(".close--serach--panel--mark");
 const searchModal = document.querySelector(".search-modal");
+const parentOfUL = document.querySelector(
+  ".place__dropdown.profile__menu .place__dropdown__UL"
+);
+const openLoginModal = parentOfUL.firstElementChild.firstElementChild;
 
 // variables
 
