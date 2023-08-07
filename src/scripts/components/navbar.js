@@ -20,7 +20,6 @@ class NavbarComponent {
     });
     // the side menu
     hamburgerMenu.addEventListener("click", () => {
-      console.log(hamburgerMenu);
       headerItem.classList.add("active");
     });
 
