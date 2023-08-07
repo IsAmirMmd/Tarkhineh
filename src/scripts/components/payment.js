@@ -1,8 +1,10 @@
 import { Storage } from "../storage.js";
+import NavbarComponent from "./navbar.js";
+
+const cartBoxList = document.querySelector(".cart-box__list");
 
 class Payment {
   showCartItem() {
-    const cartBoxList = document.querySelector(".cart-box__list");
     Storage.loadCart().map((item) => {
       const cartItem = document.createElement("div");
       cartBoxList.appendChild(cartItem);
@@ -22,6 +24,8 @@ class Payment {
         </div>
         `;
     });
+
+    this.quantityHandler();
   }
   calculatePrice() {
     const cartBoxPrice = document.querySelector(".cart-box__price");
@@ -61,6 +65,71 @@ class Payment {
         <span class="price-unit">${totalPrice}</span>
     </div>
     `;
+  }
+
+  quantityHandler() {
+    const addQuantity = document.querySelectorAll(".cart--plus");
+    const minesQuantity = document.querySelectorAll(".cart--mines");
+
+    addQuantity.forEach((addBtn) => {
+      addBtn.addEventListener("click", () => {
+        cartBoxList.replaceChildren([]);
+
+        const id = addBtn.dataset.id;
+        const index = Storage.loadCart().findIndex(
+          (item) => item.id === parseInt(id)
+        );
+        const allCartData = [...Storage.loadCart()];
+        const updatedItem = { ...allCartData[index] };
+        updatedItem.quantity++;
+        allCartData[index] = updatedItem;
+        Storage.addToCart(allCartData);
+        this.showCartItem();
+        this.calculatePrice();
+      });
+    });
+
+    minesQuantity.forEach((mineBtn) => {
+      mineBtn.addEventListener("click", () => {
+        cartBoxList.replaceChildren([]);
+
+        const id = mineBtn.dataset.id;
+        const index = Storage.loadCart().findIndex(
+          (item) => item.id === parseInt(id)
+        );
+        const allCartData = [...Storage.loadCart()];
+        const updatedItem = { ...allCartData[index] };
+        if (updatedItem.quantity === 1) {
+          const updatedCartdata = allCartData.filter(
+            (item) => item.id !== parseInt(id)
+          );
+          Storage.addToCart(updatedCartdata);
+          new NavbarComponent().loadCart();
+        } else {
+          updatedItem.quantity--;
+          allCartData[index] = updatedItem;
+          new NavbarComponent().loadCart();
+          Storage.addToCart(allCartData);
+        }
+        this.showCartItem();
+        this.calculatePrice();
+      });
+    });
+
+    const cartTRemover = document.querySelectorAll(".cart--item-remove");
+    cartTRemover.forEach((removeBtn) => {
+      removeBtn.addEventListener("click", () => {
+        const id = parseInt(removeBtn.dataset.id);
+        const allCartData = [...Storage.loadCart()];
+        const updatedCartdata = allCartData.filter(
+          (item) => item.id !== parseInt(id)
+        );
+        Storage.addToCart(updatedCartdata);
+        new NavbarComponent().loadCart();
+        this.showCartItem();
+        this.calculatePrice();
+      });
+    });
   }
 }
 
