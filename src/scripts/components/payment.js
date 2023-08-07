@@ -24,8 +24,6 @@ class Payment {
         </div>
         `;
     });
-
-    this.quantityHandler();
   }
   calculatePrice() {
     const cartBoxPrice = document.querySelector(".cart-box__price");
@@ -65,6 +63,8 @@ class Payment {
         <span class="price-unit">${totalPrice}</span>
     </div>
     `;
+
+    this.quantityHandler();
   }
 
   quantityHandler() {
@@ -114,6 +114,15 @@ class Payment {
         this.showCartItem();
         this.calculatePrice();
       });
+    });
+
+    const allCartRemover = document.querySelector(".all-cart-remove");
+    allCartRemover.addEventListener("click", () => {
+      Storage.addToCart([]);
+      new NavbarComponent().loadCart();
+      cartBoxList.replaceChildren([]);
+      this.showCartItem();
+      this.calculatePrice();
     });
 
     const cartTRemover = document.querySelectorAll(".cart--item-remove");
