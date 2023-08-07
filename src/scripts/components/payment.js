@@ -34,37 +34,32 @@ class Payment {
     });
     cartBoxPrice.innerHTML = `
     <div class="cart-box__amount only-desktop">
-    <div>
-      <span class="cart-name" style="font-size: 1.6rem"
-        >سبد خرید</span
-      >
-      <span class="cart-count" style="font-size: 1.4rem"
-        >(${Storage.loadCart().length})</span
-      >
+        <div>
+        <span class="cart-name" style="font-size: 1.6rem"
+            >سبد خرید</span
+        >
+        <span class="cart-count" style="font-size: 1.4rem"
+            >(${Storage.loadCart().length})</span
+        >
+        </div>
+        <div class="all-cart-remove">
+            <img style="width: 24px" src="../src/data/trash.svg" alt="" />
+        </div>
     </div>
-    <div class="all-cart-remove">
-      <img style="width: 24px" src="../src/data/trash.svg" alt="" />
+    <div class="cart-box__price--discout">
+        <p>تخفیف محصولات</p>
+        <span class="price-unit"> ${totalOff} </span>
     </div>
-  </div>
-  <div class="cart-box__price--discout">
-    <p>تخفیف محصولات</p>
-    <span class="price-unit"> ${totalOff} </span>
-  </div>
-  <div class="cart-box__price--post">
-    <div>
-      <p>هزینه ارسال</p>
-      <span class="price-unit">37000</span>
+    <div class="cart-box__price--post">
+        <div>
+            <p>هزینه ارسال</p>
+            <span class="price-unit">37000</span>
+        </div>
     </div>
-    <div>
-      <img src="../src/data/warning-2.svg" alt="" />
-      هزینه ارسال در ادامه بر اساس آدرس، زمان و نحوه ارسال انتخابی شما
-      محاسبه و به این مبلغ اضافه خواهد شد.
+    <div class="cart-box__price--all">
+        <p>مبلغ قابل پرداخت</p>
+        <span class="price-unit">${totalPrice}</span>
     </div>
-  </div>
-  <div class="cart-box__price--all">
-    <p>مبلغ قابل پرداخت</p>
-    <span class="price-unit">${totalPrice}</span>
-  </div>
     `;
   }
 }
