@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../src/styles/style.css" />
+    <link rel="stylesheet" href="../src/styles/font.css" />
+    <!-- slider cdn  -->
+    <link rel="stylesheet" href="../src/libraries/swiper/swiper.min.css" />
+    <!-- font awsome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Tarkhineh | ترخینه</title>
+  </head>
+  <body>
+    <header class="tarkhine__header">
+      <nav class="header__nav">
+        <div class="header__hamburger">
+          <div class="hamburger__line"></div>
+          <div class="hamburger__line"></div>
+          <div class="hamburger__line"></div>
+        </div>
+        <div class="header__logo">
+          <img src="../src/data/full-logo.svg" alt="" />
+        </div>
+        <div class="header__links">
+          <div class="modal-background"></div>
+          <div class="search-modal"></div>
+          <div class="search--function">
+            <div class="close--serach--panel">
+              <span class="close--serach--panel--mark">✖</span>
+              <p>جستجو</p>
+            </div>
+            <div class="function--serach--panel">
+              <p>لطفا متن خود را تایپ و سپس دکمه Enter را بزنید.</p>
+              <div class="search-box">
+                <input
+                  type="text"
+                  name="searchBox"
+                  id="searchBox"
+                  placeholder="جستجو"
+                />
+                <button class="search-box-img">
+                  <img src="../src/data/search-normal-black.svg" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <ul class="header__links__items">
+            <li class="image--panel--parent">
+              <span class="close-panel">✖</span>
+              <img src="../src/data/panel-logo.svg" alt="" />
+            </li>
+            <li class="header__link--item">
+              <div class="badge-icon only-phone">
+                <img src="../src/data/home.svg" alt="" />
+              </div>
+              <a href="../index.html"> صفحه اصلی </a>
+            </li>
+            <li class="header__link--item place__item">
+              <div class="badge-icon only-phone">
+                <img src="../src/data/home-hashtag.svg" alt="" />
+              </div>
+              <a href="./foods.html" class="flex__link">
+                <i class="fas fa-caret-down only-desktop"></i>
+                شعبه
+              </a>
+              <div class="place__dropdown only-desktop">
+                <ul class="place__dropdown__UL">
+                  <li>
+                    <a href="../public/foods.html"> اکباتان </a>
+                  </li>
+                  <li>
+                    <a href="../public/foods.html"> چالوس </a>
+                  </li>
+                  <li>
+                    <a href="../public/foods.html"> اقدسیه </a>
+                  </li>
+                  <li>
+                    <a href="../public/foods.html"> ونک </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="header__link--item place__item header__menuBar">
+              <div class="badge-icon only-phone">
+                <img src="../src/data/menu-board.svg" alt="" />
+              </div>
+              <a class="flex__link" href="./menu.html">
+                <i class="fas fa-caret-down only-desktop"></i>
+                منو
+              </a>
+              <div class="place__dropdown only-desktop">
+                <ul class="place__dropdown__UL">
+                  <li>
+                    <a class="menu_link" href="../public/menu.html">
+                      غذای اصلی
+                    </a>
+                  </li>
+                  <li>
+                    <a class="menu_link" href="../public/menu.html">
+                      پیش غذا
+                    </a>
+                  </li>
+                  <li>
+                    <a class="menu_link" href="../public/menu.html"> دسر </a>
+                  </li>
+                  <li>
+                    <a class="menu_link" href="../public/menu.html">
+                      نوشیدنی
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="header__link--item">
+              <div class="badge-icon only-phone">
+                <img src="../src/data/command-square.svg" alt="" />
+              </div>
+              <a href="../public/contribute.html"> اعطای نمایندگی </a>
+            </li>
+            <li class="header__link--item">
+              <div class="badge-icon only-phone">
+                <img src="../src/data/profile-2user.svg" alt="" />
+              </div>
+              <a href="../public/about-us.html"> درباره ما </a>
+            </li>
+            <li class="header__link--item">
+              <div class="badge-icon only-phone">
+                <img src="../src/data/call-calling.svg" alt="" />
+              </div>
+              <a href="../public/contact-us.html"> تماس با ما </a>
+            </li>
+          </ul>
+        </div>
+        <div class="header__cta">
+          <div class="cta__item cta--user">
+            <img src="../src/data/user-icon.svg" alt="" />
+            <img
+              src="../src/data/arrow-down.svg"
+              class="arrow-down-profile"
+              alt=""
+            />
+            <div class="place__dropdown profile__menu">
+              <ul class="place__dropdown__UL">
+                <li>
+                  <a href="../public/dashboard.html"> داشبورد </a>
+                </li>
+                <li>
+                  <a href="../public/cart.html"> سبد خرید </a>
+                </li>
+                <li>
+                  <a href="../public/order.html"> سفارشات </a>
+                </li>
+                <li>
+                  <a href="../public/settings.html"> تنظیمات </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="cta__item cta--cart"></div>
+          <div class="cta__item cta--search">
+            <img src="../src/data/search-normal.svg" alt="" />
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="profile-container container">
+        <div class="profile--setings">
+            
+        </div>
+        <div class="profile--option">
+
+        </div>
+    </div>
+    <footer class="footer"></footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="../src/scripts/main.js" type="module"></script>
+  </body>
+</html>
