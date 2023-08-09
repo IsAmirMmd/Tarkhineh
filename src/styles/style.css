@@ -3266,10 +3266,12 @@ span.error-form {
   display: flex;
   gap: 4px;
   align-items: center;
+  padding-right: 0.25rem;
 }
 .profile--settings__link.active-profile-link {
   font-size: 1.6rem;
   color: var(--primary-color);
+  border-right: 2px solid var(--primary-color);
 }
 .profile--settings__link.active-profile-link img {
   width: 20px;
@@ -3282,6 +3284,7 @@ span.error-form {
   padding: 2.4rem;
 }
 .profile--option h2{
+  font-size: 2rem;
   padding-bottom: 1rem;
   margin-bottom: 4.8rem;
   border-bottom: 1px solid var(--Neutral-Gray-7);
@@ -3301,11 +3304,18 @@ span.error-form {
   background-color: #fff;
   color: var(--primary-color);
 }
+.profile--settings--details .profile--name{
+  font-size: 1.6rem;
+}
+.profile--settings--details .profile--phone{
+  font-size: 1.2rem;
+  color: var(--Neutral-Gray-5);
+}
 @media screen and (min-width:768px) {
   .profile-container{
     flex-direction: row;
   }
   .profile--setings{
-    width: 25%;
+    width: 35%;
   }
 }
