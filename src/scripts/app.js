@@ -9,6 +9,7 @@ import loginVerificationCode from "./components/loginVerification.js";
 // swiper library
 import swiper from "./components/swiper.js";
 import Payment from "./components/payment.js";
+import phoneHolder from "./components/dashboard.js";
 
 const navbar = new NavbarComponent();
 
@@ -49,6 +50,7 @@ class app {
     if (window.location.pathname.toLowerCase().includes("/public/searchpage")) {
       searchbox.searchResult();
     }
+    if (window.location.pathname.includes("dashboard")) phoneHolder();
     footer;
   }
 }
