@@ -3252,7 +3252,7 @@ span.error-form {
   align-items: end;
 }
 .profile--settings--avatar img {
-  width: 88px;
+  width: 48px;
   aspect-ratio: 1;
 }
 .profile--settings__user-Setting {
@@ -3262,29 +3262,29 @@ span.error-form {
 }
 .profile--settings__link {
   color: var(--Neutral-Gray-6);
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   display: flex;
   gap: 4px;
   align-items: center;
   padding-right: 0.25rem;
 }
 .profile--settings__link.active-profile-link {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: var(--primary-color);
   border-right: 2px solid var(--primary-color);
 }
 .profile--settings__link.active-profile-link img {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  aspect-ratio: 1;
 }
-.profile--option{
+.profile--option {
   min-height: 75vh;
   border: 1px solid var(--Neutral-Gray-7);
   border-radius: var(--Border-Radius-8);
   padding: 2.4rem;
 }
-.profile--option h2{
-  font-size: 2rem;
+.profile--option h2 {
+  font-size: 1.6rem;
   padding-bottom: 1rem;
   margin-bottom: 4.8rem;
   border-bottom: 1px solid var(--Neutral-Gray-7);
@@ -3298,24 +3298,57 @@ span.error-form {
 .profile--option .input-login-holder {
   flex: 1 1 450px;
 }
-.profile--option .link-btn{
+.profile--option .link-btn {
   margin-top: 3.2rem;
   border: 1px solid var(--primary-color);
   background-color: #fff;
   color: var(--primary-color);
+  padding: 1rem 2rem;
+  gap: 8px;
 }
-.profile--settings--details .profile--name{
-  font-size: 1.6rem;
+.profile--option .link-btn img {
+  width: 16px;
+  aspect-ratio: 1;
 }
-.profile--settings--details .profile--phone{
+.profile--settings--details .profile--name {
   font-size: 1.2rem;
+}
+.profile--settings--details .profile--phone {
+  font-size: 1rem;
   color: var(--Neutral-Gray-5);
 }
-@media screen and (min-width:768px) {
-  .profile-container{
+.profile--log-out{
+  color: var(--State-Error-Error);
+}
+@media screen and (min-width: 768px) {
+  .profile-container {
     flex-direction: row;
   }
-  .profile--setings{
+  .profile--setings {
     width: 35%;
+  }
+  .profile--option h2 {
+    font-size: 2rem;
+  }
+  .profile--settings--details .profile--name {
+    font-size: 1.6rem;
+  }
+  .profile--settings--details .profile--phone {
+    font-size: 1.2rem;
+  }
+  .profile--option .link-btn img {
+    width: 24px;
+  }
+  .profile--settings--avatar img {
+    width: 88px;
+  }
+  .profile--settings__link {
+    font-size: 1.4rem;
+  }
+  .profile--settings__link.active-profile-link {
+    font-size: 1.6rem;
+  }
+  .profile--settings__link.active-profile-link img {
+    width: 20px;
   }
 }
